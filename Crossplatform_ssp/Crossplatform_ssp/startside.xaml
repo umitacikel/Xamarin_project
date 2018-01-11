@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Crossplatform_ssp.startside"
+             Title="Startside"
+             BackgroundColor="White">
+
+    <StackLayout>
+        <Button x:Name="startSSPBtn" Text="SSP"/>
+        <Button x:Name="startCubeBtn" Text="Cube"/>
+        <Button x:Name="startTetrizBtn" Text="Tetriz"/>
+        <Button x:Name="startPubBtn" Text="Publikationer"/>
+        <Button x:Name="AdminsideBtn" Text="AdminSide"/>
+    </StackLayout>
+        
+
+</ContentPage>
+    
+    

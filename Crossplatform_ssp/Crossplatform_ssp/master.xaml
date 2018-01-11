@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Crossplatform_ssp.master"
+             Title="Master"
+             Icon="menu.png">
+
+    <StackLayout >
+        <Button x:Name="sspBTN" Text="SSP" />
+        <Button x:Name="cubeBTN" Text="Cube"/>
+        <Button x:Name="tetrizBTN" Text="Tetriz"/>
+        <Button x:Name="publikationerBTN" Text="Publikationer"/>
+        <Button x:Name="Admin" Text="Admin"/>
+    </StackLayout>
+    
+</ContentPage>
