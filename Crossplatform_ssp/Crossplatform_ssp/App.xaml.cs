@@ -9,7 +9,7 @@ namespace Crossplatform_ssp
 {
 	public partial class App : Application
 	{
-
+        
         static DatabaseFolder.DatabaseCubeBegivenhedController db_cb;
         public static MasterDetailPage MasterDetail { get; set; }
 

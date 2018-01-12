@@ -7,7 +7,7 @@ namespace Crossplatform_ssp.DatabaseFolder
 {
     public class DatabaseCubeBegivenhed
     {
-        [PrimaryKey]
+        [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
         public String C_BegivenhedEmne { get; set; }
         public String C_BegivenhedBesked { get; set; }

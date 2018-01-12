@@ -88,17 +88,25 @@ namespace Crossplatform_ssp.AdminFolder
                 };
 
 
-                var text = Begivenhed_emne.Text;
+                
 
-            opret_begivenhed.Clicked += (o, i) =>
+                opret_begivenhed.Clicked += (o, i) =>
                 {
-                    if (text == "a")
+                    var beg_emne = Begivenhed_emne.Text;
+                    var beg_besked = Begivenhed_besked.Text;
+                    if (string.IsNullOrEmpty(beg_emne) || string.IsNullOrEmpty(beg_besked))
                     {
                         DisplayAlert("Fejl", "Udfyld venligst alle felter", "OK");
                     }
-                    else if (text != "")
+                    else if (!string.IsNullOrEmpty(beg_emne) || !string.IsNullOrEmpty(beg_besked))
                     {
+                        var begivenhed = new DatabaseFolder.DatabaseCubeBegivenhed(beg_emne, beg_besked);
+
+                        DatabaseFolder.DatabaseCubeBegivenhedController begivenhed_insert = new DatabaseFolder.DatabaseCubeBegivenhedController();
+                        begivenhed_insert.Save_begivenhed_C(begivenhed);
                         Navigation.PopModalAsync();
+                        DisplayAlert("Begivenhed", "Begivenhed oprettet", "ok");
+                        
                     }
                 };
 

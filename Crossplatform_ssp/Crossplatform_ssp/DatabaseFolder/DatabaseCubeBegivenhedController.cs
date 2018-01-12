@@ -1,10 +1,13 @@
-﻿using SQLite;
+﻿using Crossplatform_ssp.DatabaseFolder;
+using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace Crossplatform_ssp.DatabaseFolder
+namespace Crossplatform_ssp.DatabaseCubeBegivenhedController
 {
     public class DatabaseCubeBegivenhedController
     {
@@ -33,5 +36,27 @@ namespace Crossplatform_ssp.DatabaseFolder
                 }
             }
         }
+
+        public DatabaseCubeBegivenhed Get_Begivenhed()
+        {
+         lock (locker)
+         {
+                if (database.Table<DatabaseCubeBegivenhed>().Count() == 0)
+                {
+                    return null;
+                }
+                else
+                {
+                    return database.Table<DatabaseCubeBegivenhed>().First();
+                }
+         }
+        }
+
+        public List<DatabaseCubeBegivenhed> getAllBegivenheder()
+        {
+            List<DatabaseCubeBegivenhed> Begivenheder = database.Table<DatabaseCubeBegivenhed>().ToList();
+            return Begivenheder;
+        }
+
     }
 }
