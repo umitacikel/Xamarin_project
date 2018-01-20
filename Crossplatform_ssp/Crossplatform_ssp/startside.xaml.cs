@@ -38,6 +38,8 @@ namespace Crossplatform_ssp
                 await App.NavigateMasterDetail(new AdminFolder.Admin());
             };
 
+
+
         }
     }
 }

@@ -1,27 +1,24 @@
-﻿using Crossplatform_ssp.DatabaseFolder;
-using SQLite;
+﻿using SQLite;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Crossplatform_ssp.DatabaseFolder
 {
-    public class DatabaseCubeBegivenhedController
+    public class DatabaseTCPersonaleController
     {
         static object locker = new object();
 
         SQLiteConnection database;
 
-        public DatabaseCubeBegivenhedController()
+        public DatabaseTCPersonaleController()
         {
             database = DependencyService.Get<ISQLite>().GetConnection();
-            database.CreateTable<DatabaseCubeBegivenhed>();
+            database.CreateTable<DatabaseTCPersonale>();
         }
 
-       /* public int Save_begivenhed_C(DatabaseCubeBegivenhed dcb)
+        public int Opret_TCPersonale(DatabaseTCPersonale dcb)
         {
             lock (locker)
             {
@@ -35,27 +32,30 @@ namespace Crossplatform_ssp.DatabaseFolder
                     return database.Insert(dcb);
                 }
             }
-        }*/
-        public DatabaseCubeBegivenhed Get_Begivenhed()
+        }
+
+
+        public DatabaseTCPersonale hent_TCPersonale()
         {
-         lock (locker)
-         {
-                if (database.Table<DatabaseCubeBegivenhed>().Count() == 0)
+            lock (locker)
+            {
+                if (database.Table<DatabaseTCPersonale>().Count() == 0)
                 {
                     return null;
                 }
                 else
                 {
-                    return database.Table<DatabaseCubeBegivenhed>().First();
+                    return database.Table<DatabaseTCPersonale>().First();
                 }
-         }
+            }
         }
 
-        public int Delete_begivenhed_C(int id)
+
+        public int Slet_TCPersonale(int id)
         {
             lock (locker)
             {
-                return database.Delete<DatabaseCubeBegivenhed>(id);
+                return database.Delete<DatabaseTCPersonale>(id);
             }
         }
     }

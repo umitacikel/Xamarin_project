@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Crossplatform_ssp.AdminFolder.AdminSSP"
+             Title="SSP">
+
+    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
+        <Button  Text="Opret SSP UngRåd" x:Name="OpretUngrådBtn"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        <Button  Text="Opdater SSP UngRåd" x:Name="OpdaterUngrådBtn"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        <Button Text="Opret SSP Fritidspas" x:Name="OpretFriPasBtn" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        <Button Text="Opdater SSP Fritidspas" x:Name="OpdaterFripasBtn" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+    </StackLayout>  
+</ContentPage>

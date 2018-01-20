@@ -1,27 +1,24 @@
-﻿using Crossplatform_ssp.DatabaseFolder;
-using SQLite;
+﻿using SQLite;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Crossplatform_ssp.DatabaseFolder
 {
-    public class DatabaseCubeBegivenhedController
+    public class DatabaseTetrizOpslagController
     {
         static object locker = new object();
 
         SQLiteConnection database;
 
-        public DatabaseCubeBegivenhedController()
+        public DatabaseTetrizOpslagController()
         {
             database = DependencyService.Get<ISQLite>().GetConnection();
-            database.CreateTable<DatabaseCubeBegivenhed>();
+            database.CreateTable<DatabaseTetrizOpslag>();
         }
 
-       /* public int Save_begivenhed_C(DatabaseCubeBegivenhed dcb)
+      /*  public int Save_Opslag_T(DatabaseTetrizOpslag dcb)
         {
             lock (locker)
             {
@@ -36,26 +33,26 @@ namespace Crossplatform_ssp.DatabaseFolder
                 }
             }
         }*/
-        public DatabaseCubeBegivenhed Get_Begivenhed()
+        public DatabaseTetrizOpslag Get_Opslag()
         {
-         lock (locker)
-         {
-                if (database.Table<DatabaseCubeBegivenhed>().Count() == 0)
+            lock (locker)
+            {
+                if (database.Table<DatabaseTetrizOpslag>().Count() == 0)
                 {
                     return null;
                 }
                 else
                 {
-                    return database.Table<DatabaseCubeBegivenhed>().First();
+                    return database.Table<DatabaseTetrizOpslag>().First();
                 }
-         }
+            }
         }
 
-        public int Delete_begivenhed_C(int id)
+        public int Delete_Opslag_T(int id)
         {
             lock (locker)
             {
-                return database.Delete<DatabaseCubeBegivenhed>(id);
+                return database.Delete<DatabaseTetrizOpslag>(id);
             }
         }
     }

@@ -3,11 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Crossplatform_ssp.AdminFolder.AdminTetriz"
              Title="Tetriz">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+
+    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
+        <Button Text="Opret Tetriz Begivenhed" x:Name="opretTBBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+        <Button Text="Slet Begivenhed" x:Name="sletTBBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+        <Button Text="Opdater Begivenhed" x:Name="opdaterTBBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+        
+        <Button Text="Opret Tetriz Opslag" x:Name="opretTOBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+        <Button Text="Slet Opslag" x:Name="sletTOBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+        <Button Text="Opdater Opslag" x:Name="opdaterTOBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+    </StackLayout>
 </ContentPage>

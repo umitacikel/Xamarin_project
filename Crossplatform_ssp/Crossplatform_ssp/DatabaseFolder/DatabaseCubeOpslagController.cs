@@ -1,27 +1,24 @@
-﻿using Crossplatform_ssp.DatabaseFolder;
-using SQLite;
+﻿using SQLite;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Crossplatform_ssp.DatabaseFolder
 {
-    public class DatabaseCubeBegivenhedController
+    public class DatabaseCubeOpslagController
     {
         static object locker = new object();
 
         SQLiteConnection database;
 
-        public DatabaseCubeBegivenhedController()
+        public DatabaseCubeOpslagController()
         {
             database = DependencyService.Get<ISQLite>().GetConnection();
-            database.CreateTable<DatabaseCubeBegivenhed>();
+            database.CreateTable<DatabaseCubeOpslag>();
         }
 
-       /* public int Save_begivenhed_C(DatabaseCubeBegivenhed dcb)
+       /* public int Save_Opslag_C(DatabaseCubeOpslag dcb)
         {
             lock (locker)
             {
@@ -36,27 +33,28 @@ namespace Crossplatform_ssp.DatabaseFolder
                 }
             }
         }*/
-        public DatabaseCubeBegivenhed Get_Begivenhed()
+        public DatabaseCubeOpslag Get_Opslag()
         {
-         lock (locker)
-         {
-                if (database.Table<DatabaseCubeBegivenhed>().Count() == 0)
+            lock (locker)
+            {
+                if (database.Table<DatabaseCubeOpslag>().Count() == 0)
                 {
                     return null;
                 }
                 else
                 {
-                    return database.Table<DatabaseCubeBegivenhed>().First();
+                    return database.Table<DatabaseCubeOpslag>().First();
                 }
-         }
+            }
         }
 
-        public int Delete_begivenhed_C(int id)
+        public int Delete_Opslag_C(int id)
         {
             lock (locker)
             {
-                return database.Delete<DatabaseCubeBegivenhed>(id);
+                return database.Delete<DatabaseCubeOpslag>(id);
             }
         }
     }
 }
+

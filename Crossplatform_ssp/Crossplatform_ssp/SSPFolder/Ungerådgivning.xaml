@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Crossplatform_ssp.SSPFolder.Ungerådgivning"
+             Title="Ungerådgivning" BackgroundColor="WhiteSmoke">
+    <ListView ItemsSource="{Binding .}"  x:Name="listviewungråd" HasUnevenRows="true" SeparatorVisibility="None"
+                 IsPullToRefreshEnabled="True" Refreshing="listviewungråd_RefreshingAsync" >
+        <ListView.ItemTemplate>
+            <DataTemplate >
+                <ViewCell >
+                    <ViewCell.View>
+                        <StackLayout Spacing="10" Padding="20">
+                            <Label Text="{Binding UngRåd_Titel}" Font="Bold, 20"/>
+                            <Label Text="{Binding UngRåd_Tekst}" FontSize="16"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="35" >
+                                <Button x:Name="ÅbenOpkald" Image="Telefon.png" Clicked="åben_opkaldBtn" BackgroundColor="WhiteSmoke"  />
+                                <Button x:Name="ÅbenBesked" Image="Email.png" Clicked="Send_EmailBtn" BackgroundColor="WhiteSmoke"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+ 
+
+</ContentPage>

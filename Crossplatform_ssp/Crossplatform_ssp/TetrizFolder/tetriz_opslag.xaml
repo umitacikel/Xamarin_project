@@ -3,11 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Crossplatform_ssp.TetrizFolder.tetriz_opslag"
              Title="Opslag" Icon="ic_tab.png" >
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to tetopslag!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <ListView ItemsSource="{Binding .}"  x:Name="listviewTetrizOpslag" HasUnevenRows="true" SeparatorVisibility="None"
+               IsPullToRefreshEnabled="True" Refreshing="listviewTetrizOpslag_RefreshingAsync">
+        <ListView.ItemTemplate>
+            <DataTemplate >
+                <ViewCell >
+                    <ViewCell.View>
+                        <StackLayout Spacing="10" Padding="20">
+                            <Label  Text="{Binding T_OpslagEmne}" FontSize="20"  Font="Bold, 20"/>
+                            <Label Text="{Binding T_OpslagBesked}" FontSize="16"/>
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>

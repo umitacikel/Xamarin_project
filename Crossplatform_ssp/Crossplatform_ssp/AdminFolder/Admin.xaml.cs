@@ -18,9 +18,15 @@ namespace Crossplatform_ssp.AdminFolder
 
             var adminTet = new AdminTetriz();
             var adminCub = new AdminCube();
+            var adminssp = new AdminSSP();
+            var adminPublikationer = new AdminPublikationer();
+            var personale = new Personale();
 
+            this.Children.Add(adminssp);
             this.Children.Add(adminTet);
             this.Children.Add(adminCub);
+            this.Children.Add(adminPublikationer);
+            this.Children.Add(personale);
 		}
 	}
 }
