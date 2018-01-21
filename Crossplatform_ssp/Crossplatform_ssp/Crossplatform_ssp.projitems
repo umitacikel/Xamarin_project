@@ -63,9 +63,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseCubeBegivenhederDB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseCubeOpslagDB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseSSPFritidspasDB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseSSPPersonale.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseSSPUngerådDB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseTetrizBegivenhederDB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseTetrizOpslagDB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FriebaseCTPersonale.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -79,6 +81,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SSPFolder\ssp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SSPFolder\SSPFacebook.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SSPFolder\SSPPersonale.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SSPFolder\Ungerådgivning.xaml.cs">
@@ -223,6 +231,16 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)AdminFolder\Personale.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SSPFolder\SSPPersonale.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SSPFolder\SSPFacebook.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

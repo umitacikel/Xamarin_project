@@ -1,31 +1,192 @@
-﻿using Plugin.FilePicker.Abstractions;
-using Plugin.FilePicker;
-using SQLite;
+﻿using Plugin.Media;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using System.IO;
-
+using Rg.Plugins.Popup.Pages;
 namespace Crossplatform_ssp.AdminFolder
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Personale : ContentPage
 	{
-		public Personale ()
-		{
-			InitializeComponent ();
+        Stream imgstr;
 
-            SQLiteConnection database;
-
-
-           
-               //     FileData filedata = await CrossFilePicker.Current.PickFile();
+        PopupPage pop = new PopupPage()
+        {
+            BackgroundColor = Color.White
+        };
+        static  Entry personale_navn = new Entry
+        {
+            Placeholder="Navn"
+        };
+        static Entry personale_stilling = new Entry
+        {
+            Placeholder="Stilling"
+        };
+        static Entry personale_email = new Entry
+        {
+            Placeholder="Email"
+        };
+        static Entry personale_nummer = new Entry
+        {
+            Placeholder="Nummer"
+        };
+        static Image personale_billede = new Image
+        {
             
+        };
+
+        static Button personale_uploadBtn = new Button
+        {
+            Text="Upload billede"
+        };
+
+        static Button personale_opretBtn = new Button
+        {
+            Text="Opret Personale"
+        };
+
+        StackLayout Opret_lay = new StackLayout()
+        {
+            VerticalOptions = LayoutOptions.Center,
+            HorizontalOptions = LayoutOptions.Fill,
+            Orientation = StackOrientation.Vertical,
+            Children =
+          {personale_billede, personale_navn, personale_stilling, personale_email, personale_nummer, personale_uploadBtn, personale_opretBtn }
+        };
+        public Personale()
+        {
+            InitializeComponent();
+           
+            opretPersonale.Clicked += async (sender, e) =>
+            {
+                
+                pop.Content = Opret_lay;
+                await Navigation.PushModalAsync(pop, false);
+                personale_navn.Text = "";
+                personale_stilling.Text = "";
+                personale_email.Text = "";
+                personale_nummer.Text = "";
+                imgstr = null;
+                personale_uploadBtn.Clicked += async (sende, i) =>
+                {
+                    try
+                    {
+                        await CrossMedia.Current.Initialize();
+
+                        if (CrossMedia.IsSupported == false)
+                        {
+                            await DisplayAlert("Fejl", "Din enhed kan ikke uploade fotos", "ok");
+                        }
+                        else
+                        {
+                            var file = await CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions()
+                            {
+                               
+                            });
+
+                            if (file != null)
+                            {
+
+                                personale_billede.Source = ImageSource.FromStream(() => imgstr);
+                                imgstr = file.GetStream();
+
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+
+                };
+
+                personale_opretBtn.Clicked += async (sendr, a) =>
+                {
+                    try
+                    {
+                        var fire = new FirebaseFolder.FriebaseCTPersonale();
+                        var person = new DatabaseFolder.DatabaseTCPersonale(personale_navn.Text, personale_stilling.Text, personale_email.Text, personale_nummer.Text);
+
+                        await fire.saveImageAsync(imgstr, person);
+                        await Navigation.PopModalAsync();
+                        Navigation.RemovePage(pop);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+                };
+
+              
+
+            };
+
+
+            OpretPersonaleSSP.Clicked += async (sender, e) =>
+            {
+
+                pop.Content = Opret_lay;
+                await Navigation.PushModalAsync(pop, false);
+                personale_navn.Text = "";
+                personale_stilling.Text = "";
+                personale_email.Text = "";
+                personale_nummer.Text = "";
+                imgstr = null;
+                personale_uploadBtn.Clicked += async (sende, i) =>
+                {
+                    try
+                    {
+                        await CrossMedia.Current.Initialize();
+
+                        if (CrossMedia.IsSupported == false)
+                        {
+                            await DisplayAlert("Fejl", "Din enhed kan ikke uploade fotos", "ok");
+                        }
+                        else
+                        {
+                            var file = await CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions()
+                            {
+
+                            });
+
+                            if (file != null)
+                            {
+
+                                personale_billede.Source = ImageSource.FromStream(() => imgstr);
+                                imgstr = file.GetStream();
+
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+
+                };
+
+                personale_opretBtn.Clicked += async (sendr, a) =>
+                {
+                    try
+                    {
+                        var fire = new FirebaseFolder.FirebaseSSPPersonale();
+                        var person = new DatabaseFolder.DatabaseTCPersonale(personale_navn.Text, personale_stilling.Text, personale_email.Text, personale_nummer.Text);
+
+                        await fire.saveImageAsync(imgstr, person);
+                        await Navigation.PopModalAsync();
+                        Navigation.RemovePage(pop);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+                };
+
+
+
+            };
+
         }
     }
 }

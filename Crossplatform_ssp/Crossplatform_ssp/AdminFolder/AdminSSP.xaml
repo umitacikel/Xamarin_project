@@ -5,9 +5,7 @@
              Title="SSP">
 
     <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
-        <Button  Text="Opret SSP UngRåd" x:Name="OpretUngrådBtn"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
         <Button  Text="Opdater SSP UngRåd" x:Name="OpdaterUngrådBtn"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-        <Button Text="Opret SSP Fritidspas" x:Name="OpretFriPasBtn" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
         <Button Text="Opdater SSP Fritidspas" x:Name="OpdaterFripasBtn" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
     </StackLayout>  
 </ContentPage>

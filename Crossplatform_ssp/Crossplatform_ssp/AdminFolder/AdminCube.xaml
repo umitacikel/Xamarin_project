@@ -5,11 +5,7 @@
              Title="Cube">
     <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
       <Button Text="Opret Cube Begivenhed" x:Name="opretCBBtn" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-      <Button Text="Slet Begivenhed" x:Name="sletCBBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
-      <Button Text="Opdater Begivenhed" x:Name="opdaterCBBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
-        <Button Text="Opret Cube Opslag" x:Name="opretCOBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
-        <Button Text="Slet Opslag" x:Name="sletCOBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
-        <Button Text="Opdater Opslag" x:Name="opdaterCOBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+      <Button Text="Opret Cube Opslag" x:Name="opretCOBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
     </StackLayout>
 
     

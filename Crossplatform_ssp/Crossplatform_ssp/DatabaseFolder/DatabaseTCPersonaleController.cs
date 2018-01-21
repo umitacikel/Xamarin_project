@@ -18,7 +18,7 @@ namespace Crossplatform_ssp.DatabaseFolder
             database.CreateTable<DatabaseTCPersonale>();
         }
 
-        public int Opret_TCPersonale(DatabaseTCPersonale dcb)
+      /*  public int Opret_TCPersonale(DatabaseTCPersonale dcb)
         {
             lock (locker)
             {
@@ -33,7 +33,7 @@ namespace Crossplatform_ssp.DatabaseFolder
                 }
             }
         }
-
+        */
 
         public DatabaseTCPersonale hent_TCPersonale()
         {

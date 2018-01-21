@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Crossplatform_ssp.CubeFolder
+namespace Crossplatform_ssp.SSPFolder
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class cube_medarbejder : ContentPage
+	public partial class SSPPersonale : ContentPage
 	{
-        FirebaseFolder.FriebaseCTPersonale fbPersonale = new FirebaseFolder.FriebaseCTPersonale();
+        FirebaseFolder.FirebaseSSPPersonale fbPersonale = new FirebaseFolder.FirebaseSSPPersonale();
 
         protected override async void OnAppearing()
         {
@@ -20,7 +20,7 @@ namespace Crossplatform_ssp.CubeFolder
             var list = await fbPersonale.GetPersonale();
             listviewPersonale.BindingContext = list;
         }
-        public cube_medarbejder ()
+        public SSPPersonale ()
 		{
 			InitializeComponent ();
 		}

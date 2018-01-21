@@ -4,7 +4,7 @@
              x:Class="Crossplatform_ssp.CubeFolder.cube_begivenheder"
              Title="Begivenheder" Icon="ic_event.png">
     <ListView ItemsSource="{Binding .}"  x:Name="listviewCubeBegivenhed" HasUnevenRows="true" SeparatorVisibility="None"
-                 IsPullToRefreshEnabled="True" Refreshing="listviewCubeBegivenhed_RefreshingAsync" > 
+                 IsPullToRefreshEnabled="True" Refreshing="listviewCubeBegivenhed_RefreshingAsync"> 
             <ListView.ItemTemplate> 
                 <DataTemplate >
                   <ViewCell >

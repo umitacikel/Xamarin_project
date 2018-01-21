@@ -167,6 +167,7 @@ namespace Crossplatform_ssp.AdminFolder
                         Opret_Emne.Text = "";
                         Opret_Besked.Text = "";
                         await Navigation.PopModalAsync();
+                        Navigation.RemovePage(Opret_pop);
                         await DisplayAlert("Begivenhed", "Begivenhed oprettet", "ok");
 
                     }
@@ -299,6 +300,7 @@ namespace Crossplatform_ssp.AdminFolder
                         Opret_Emne.Text = "";
                         Opret_Besked.Text = "";
                         await Navigation.PopModalAsync();
+                        Navigation.RemovePage(Opret_pop);
                         await DisplayAlert("Opslag", "Opslag oprettet", "ok");
 
                     }

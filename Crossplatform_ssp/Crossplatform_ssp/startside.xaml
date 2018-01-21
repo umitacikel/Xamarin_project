@@ -6,14 +6,16 @@
              BackgroundColor="White">
 
     <StackLayout>
-        <Button x:Name="startSSPBtn" Text="SSP"/>
-        <Button x:Name="startCubeBtn" Text="Cube"/>
-        <Button x:Name="startTetrizBtn" Text="Tetriz"/>
-        <Button x:Name="startPubBtn" Text="Publikationer"/>
-        <Button x:Name="AdminsideBtn" Text="AdminSide"/>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="startSSPBtn" BackgroundColor="White" Image="sspicon" />
+            <Button x:Name="startCubeBtn" BackgroundColor="White" Image="cubeicon"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="startTetrizBtn" BackgroundColor="White" Image="tetrizicon"/>
+            <Button x:Name="startPubBtn" Text="Publikationer" BackgroundColor="White"/>
+        </StackLayout>
+        <Button x:Name="AdminsideBtn" Text="AdminSide" BackgroundColor="White"/>
     </StackLayout>
-        
-
 </ContentPage>
     
     

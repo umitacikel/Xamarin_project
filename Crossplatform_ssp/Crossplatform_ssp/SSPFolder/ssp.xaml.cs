@@ -18,9 +18,13 @@ namespace Crossplatform_ssp
 
             var ungeråd = new SSPFolder.Ungerådgivning();
             var fritidspas = new SSPFolder.Fritidspas();
+            var personale = new SSPFolder.SSPPersonale();
+            var face = new SSPFolder.SSPFacebook();
 
             this.Children.Add(ungeråd);
             this.Children.Add(fritidspas);
+            this.Children.Add(personale);
+            this.Children.Add(face);
 		}
 	}
 }

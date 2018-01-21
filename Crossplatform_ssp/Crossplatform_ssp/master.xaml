@@ -6,11 +6,11 @@
              Icon="menu.png">
 
     <StackLayout >
-        <Button x:Name="sspBTN" Text="SSP" />
-        <Button x:Name="cubeBTN" Text="Cube"/>
-        <Button x:Name="tetrizBTN" Text="Tetriz"/>
-        <Button x:Name="publikationerBTN" Text="Publikationer"/>
-        <Button x:Name="Admin" Text="Admin"/>
+        <Button x:Name="sspBTN" Text="SSP" FontSize="18" BackgroundColor="White"/>
+        <Button x:Name="cubeBTN" Text="Cube" FontSize="18" BackgroundColor="White"/>
+        <Button x:Name="tetrizBTN" Text="Tetriz" FontSize="18" BackgroundColor="White"/>
+        <Button x:Name="publikationerBTN" Text="Publikationer" FontSize="18" BackgroundColor="White"/>
+        <Button x:Name="Admin" Text="Admin" FontSize="18" BackgroundColor="White"/>
     </StackLayout>
     
 </ContentPage>

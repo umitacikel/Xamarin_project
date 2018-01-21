@@ -3,11 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Crossplatform_ssp.TetrizFolder.tetriz_medarbejder"
              Title="Medarbejdere" Icon="ic_supervisor_account.png">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to tetmed!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <ListView ItemsSource="{Binding .}" x:Name="listviewPersonale" HasUnevenRows="true" SeparatorVisibility="None"
+               IsPullToRefreshEnabled="True" Refreshing="listviewPersonale_Refreshing">
+        <ListView.ItemTemplate>
+            <DataTemplate >
+                <ViewCell >
+                    <ViewCell.View>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{Binding Billede}" HorizontalOptions="FillAndExpand" HeightRequest="150" WidthRequest="150" Aspect="AspectFit"/>
+                            <StackLayout Spacing="5" Padding="20" Orientation="Vertical" >
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Navn:" FontSize="16"/>
+                                    <Label Text="{Binding Navn}" FontSize="16" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Stilling:" FontSize="16"/>
+                                    <Label Text="{Binding Stilling}" FontSize="16"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Nummer:" FontSize="16"/>
+                                    <Label Text="{Binding Nummer}" FontSize="16"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Email:" FontSize="16"/>
+                                    <Label Text="{Binding Email}" FontSize="16"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>
+    
+   

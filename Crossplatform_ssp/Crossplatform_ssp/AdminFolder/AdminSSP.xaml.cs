@@ -73,7 +73,6 @@ namespace Crossplatform_ssp.AdminFolder
                 OpretUngrådBtn.IsEnabled = false;
             };*/
 
-            OpretUngrådBtn.IsEnabled = false;
 
         /*    OpdaterUngrådBtn.Clicked += (sender, e) =>
             {
@@ -125,7 +124,6 @@ namespace Crossplatform_ssp.AdminFolder
                 OpretFriPasBtn.IsEnabled = false;
             };*/
 
-            OpretFriPasBtn.IsEnabled = false;
 
         /*    OpdaterFripasBtn.Clicked += (sender, e) => 
             {
