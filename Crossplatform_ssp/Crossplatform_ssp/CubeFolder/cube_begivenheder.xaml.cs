@@ -28,7 +28,6 @@ namespace Crossplatform_ssp.CubeFolder
         public cube_begivenheder()
         {
             InitializeComponent();
-
         }
 
         private async Task listviewCubeBegivenhed_RefreshingAsync(object sender, EventArgs e)

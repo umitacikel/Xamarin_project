@@ -26,8 +26,8 @@ namespace Crossplatform_ssp.TetrizFolder
         public tetriz_begivenheder ()
 		{
 			InitializeComponent ();
-            
         }
+
         private async Task listviewTetrizBegivenhed_RefreshingAsync(object sender, EventArgs e)
         {
             listviewTetrizBegivenhed.BindingContext = await firedbTeBe.GetTetrizBegivenhedList();

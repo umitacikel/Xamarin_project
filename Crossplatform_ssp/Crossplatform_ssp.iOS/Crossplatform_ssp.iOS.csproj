@@ -97,6 +97,7 @@
     <None Include="Info.plist">
       <SubType>Designer</SubType>
     </None>
+    <Compile Include="Data\NetworkConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork@2x" />
@@ -269,16 +270,25 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ssplogo1.jpg" />
+    <BundleResource Include="Resources\cubeLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\sspicon.jpg" />
+    <BundleResource Include="Resources\tetrizLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\tetrizicon.png" />
+    <BundleResource Include="Resources\sspLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\cubeicon.png" />
+    <BundleResource Include="Resources\ssp_logoer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\folderLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\sspstartny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\adminbtn.png" />
   </ItemGroup>
   <Import Project="..\Crossplatform_ssp\Crossplatform_ssp.projitems" Label="Shared" Condition="Exists('..\Crossplatform_ssp\Crossplatform_ssp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

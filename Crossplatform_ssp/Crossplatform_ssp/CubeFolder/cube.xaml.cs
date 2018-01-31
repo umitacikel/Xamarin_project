@@ -24,6 +24,9 @@ namespace Crossplatform_ssp
             this.Children.Add(cube_beg);
             this.Children.Add(cube_face);
             this.Children.Add(cube_med);
+
+            this.BarBackgroundColor = Color.FromHex("#29B19D");
+            this.BarTextColor = Color.White;
         }
     }
 }

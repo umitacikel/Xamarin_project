@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Crossplatform_ssp.TetrizFolder.tetriz_opslag"
              Title="Opslag" Icon="ic_tab.png" >
+
     <ListView ItemsSource="{Binding .}"  x:Name="listviewTetrizOpslag" HasUnevenRows="true" SeparatorVisibility="None"
                IsPullToRefreshEnabled="True" Refreshing="listviewTetrizOpslag_RefreshingAsync">
         <ListView.ItemTemplate>

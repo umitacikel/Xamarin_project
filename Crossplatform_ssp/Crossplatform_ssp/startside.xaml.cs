@@ -1,4 +1,6 @@
 ﻿using Com.Hitomi.Cmlibrary;
+using Rg.Plugins.Popup.Extensions;
+using Rg.Plugins.Popup.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +12,14 @@ using Xamarin.Forms.Xaml;
 
 namespace Crossplatform_ssp 
 {
-    
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class startside : ContentPage
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class startside : ContentPage
     {
+
         public startside() {
             InitializeComponent();
+
 
             startSSPBtn.Clicked += async (sender, e) => {
                 await App.NavigateMasterDetail(new ssp());
@@ -33,13 +37,12 @@ namespace Crossplatform_ssp
                 await App.NavigateMasterDetail(new publikationer());
             };
 
-            AdminsideBtn.Clicked += async (sender, e) =>
-            {
-                await App.NavigateMasterDetail(new AdminFolder.Admin());
-            };
+            Init();
+        }
 
-
-
+        void Init()
+        {
+            App.StartCheckIfInternet(lbl_NoInternet, this);
         }
     }
 }

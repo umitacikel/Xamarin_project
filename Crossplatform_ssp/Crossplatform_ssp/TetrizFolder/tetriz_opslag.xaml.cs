@@ -26,8 +26,8 @@ namespace Crossplatform_ssp.TetrizFolder
         public tetriz_opslag ()
 		{
 			InitializeComponent ();
-
         }
+
 
         private async Task listviewTetrizOpslag_RefreshingAsync(object sender, EventArgs e)
         {

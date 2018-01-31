@@ -1,4 +1,6 @@
 ﻿using Crossplatform_ssp.DatabaseFolder;
+using Rg.Plugins.Popup.Extensions;
+using Rg.Plugins.Popup.Pages;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -18,7 +20,7 @@ namespace Crossplatform_ssp.AdminFolder
         FirebaseFolder.FirebaseCubeBegivenhederDB firedbCuBe = new FirebaseFolder.FirebaseCubeBegivenhederDB();
         //----------------------------------------------
         //Opret
-        ContentPage Opret_pop = new ContentPage
+        PopupPage Opret_pop = new PopupPage
         {
             BackgroundColor = Color.White,
             Padding = new Thickness(20, 20, 20, 20),
@@ -149,7 +151,7 @@ namespace Crossplatform_ssp.AdminFolder
             opretCBBtn.Clicked += async (sender, e) =>
             {
                 Opret_pop.Content = Opret_lay;
-                await Navigation.PushModalAsync(Opret_pop, false);
+                await Navigation.PushPopupAsync(Opret_pop);
 
                 opret_OpretBtn.Clicked += async (o, i) =>
                 {
@@ -166,8 +168,7 @@ namespace Crossplatform_ssp.AdminFolder
 
                         Opret_Emne.Text = "";
                         Opret_Besked.Text = "";
-                        await Navigation.PopModalAsync();
-                        Navigation.RemovePage(Opret_pop);
+                        await Navigation.PopPopupAsync();
                         await DisplayAlert("Begivenhed", "Begivenhed oprettet", "ok");
 
                     }
@@ -281,7 +282,7 @@ namespace Crossplatform_ssp.AdminFolder
             opretCOBtn.Clicked += async (sender, e) =>
             {
                 Opret_pop.Content = Opret_lay;
-                await Navigation.PushModalAsync(Opret_pop, false);
+                await Navigation.PushPopupAsync(Opret_pop);
 
                 opret_OpretBtn.Clicked += async (o, i) =>
                 {
@@ -299,8 +300,7 @@ namespace Crossplatform_ssp.AdminFolder
 
                         Opret_Emne.Text = "";
                         Opret_Besked.Text = "";
-                        await Navigation.PopModalAsync();
-                        Navigation.RemovePage(Opret_pop);
+                        await Navigation.PopPopupAsync();
                         await DisplayAlert("Opslag", "Opslag oprettet", "ok");
 
                     }
@@ -412,6 +412,7 @@ namespace Crossplatform_ssp.AdminFolder
                         */
 
         }
+
 
     }
 }

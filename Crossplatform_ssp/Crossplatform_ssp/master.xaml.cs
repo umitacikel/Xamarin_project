@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Extensions;
+using Rg.Plugins.Popup.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +14,29 @@ namespace Crossplatform_ssp
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class master : ContentPage
 	{
-		public master ()
+
+        PopupPage pop = new PopupPage()
+        {
+            BackgroundColor = Color.White,
+        };
+        static Entry kode = new Entry()
+        {
+            IsPassword = true,
+        };
+        static Button okKnap = new Button()
+        {
+            Text = "Ok",
+        };
+        StackLayout Opret_lay = new StackLayout()
+        {
+            VerticalOptions = LayoutOptions.Center,
+            HorizontalOptions = LayoutOptions.Center,
+            Orientation = StackOrientation.Vertical,
+            Children =
+          {kode, okKnap }
+        };
+
+        public master ()
 		{
 			InitializeComponent ();
 
@@ -36,7 +60,23 @@ namespace Crossplatform_ssp
                 await App.NavigateMasterDetail(new publikationer());
             };
 
+            AdminBtn.Clicked += async (sender, e) => {
+                kode.Text = "";
+                pop.Content = Opret_lay;
+                await Navigation.PushPopupAsync(pop);
+                okKnap.Clicked += async (sende, i) =>
+                {
+                    if (kode.Text.Equals("1234"))
+                    {
+                        await Navigation.PopPopupAsync();
+                        await App.NavigateMasterDetail(new AdminFolder.Admin());
+                    }
+                };
+
+
+            };
            
         }
+
 	}
 }

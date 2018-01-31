@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Crossplatform_ssp.AdminFolder.Personale" Title="Personale">
-    <StackLayout>
-        <Button x:Name="opretPersonale" Text="Opret Person (Cube/Tetriz)"/>
-        <Button x:Name="OpretPersonaleSSP" Text="Opret Person (SSP)"/>
+    <StackLayout >
+        <Button x:Name="opretPersonale" Text="opret tetriz cube personale"/>
+        <Button x:Name="OpretPersonaleSSP" Text="Opret ssp personale"/>
     </StackLayout>
 </ContentPage>

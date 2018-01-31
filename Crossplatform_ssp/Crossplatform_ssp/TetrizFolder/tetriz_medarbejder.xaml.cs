@@ -23,8 +23,6 @@ namespace Crossplatform_ssp.TetrizFolder
         public tetriz_medarbejder ()
 		{
 			InitializeComponent ();
-
-
 		}
 
         private async Task listviewPersonale_Refreshing(object sender, EventArgs e)

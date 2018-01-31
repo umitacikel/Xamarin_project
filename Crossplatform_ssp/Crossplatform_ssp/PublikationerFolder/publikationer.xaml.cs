@@ -15,7 +15,10 @@ namespace Crossplatform_ssp
 		public publikationer ()
 		{
 			InitializeComponent ();
+
+           
 		}
+     
 
     }
 }

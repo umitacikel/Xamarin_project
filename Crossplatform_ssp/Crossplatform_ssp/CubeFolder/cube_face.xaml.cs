@@ -16,7 +16,7 @@ namespace Crossplatform_ssp.CubeFolder
 		{
 			InitializeComponent ();
 		}
+      
 
-     
     }
 }

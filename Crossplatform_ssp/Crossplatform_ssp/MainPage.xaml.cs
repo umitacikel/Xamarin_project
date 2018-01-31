@@ -12,12 +12,13 @@ namespace Crossplatform_ssp
 		public MainPage()
 		{
 			InitializeComponent();
-
             this.Master = new master();
-            this.Detail = new NavigationPage(new startside());
+            this.Detail = new NavigationPage(new startside()) { BarBackgroundColor = Color.FromHex("#29B19D"), BarTextColor = Color.White };
             App.MasterDetail = this;
-		}
 
-       
+
+        }
+
+     
     }
 }

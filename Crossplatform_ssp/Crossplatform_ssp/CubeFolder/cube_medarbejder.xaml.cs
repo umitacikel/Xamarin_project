@@ -24,6 +24,8 @@ namespace Crossplatform_ssp.CubeFolder
 		{
 			InitializeComponent ();
 		}
+
+      
         private async Task listviewPersonale_Refreshing(object sender, EventArgs e)
         {
             listviewPersonale.BindingContext = await fbPersonale.GetPersonale();

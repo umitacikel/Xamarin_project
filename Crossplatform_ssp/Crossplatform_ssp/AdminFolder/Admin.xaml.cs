@@ -27,6 +27,9 @@ namespace Crossplatform_ssp.AdminFolder
             this.Children.Add(adminCub);
             this.Children.Add(adminPublikationer);
             this.Children.Add(personale);
-		}
-	}
+            this.BarBackgroundColor = Color.FromHex("#29B19D");
+            this.BarTextColor = Color.White;
+
+        }
+    }
 }

@@ -203,6 +203,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\NetworkConnection.cs" />
     <Compile Include="Data\SQLite_Android.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainApplication.cs" />
@@ -275,13 +276,25 @@
     <AndroidResource Include="Resources\Drawable\Folder.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\tetrizicon.png" />
+    <AndroidResource Include="Resources\Drawable\cubeLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\sspicon.jpg" />
+    <AndroidResource Include="Resources\Drawable\tetrizLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\cubeicon.png" />
+    <AndroidResource Include="Resources\Drawable\sspLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ssp_logoer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\folderLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\sspstartny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\adminbtn.png" />
   </ItemGroup>
   <Import Project="..\Crossplatform_ssp\Crossplatform_ssp.projitems" Label="Shared" Condition="Exists('..\Crossplatform_ssp\Crossplatform_ssp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

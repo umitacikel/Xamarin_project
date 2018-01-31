@@ -5,12 +5,15 @@
              Title="Master"
              Icon="menu.png">
 
+    
     <StackLayout >
         <Button x:Name="sspBTN" Text="SSP" FontSize="18" BackgroundColor="White"/>
         <Button x:Name="cubeBTN" Text="Cube" FontSize="18" BackgroundColor="White"/>
         <Button x:Name="tetrizBTN" Text="Tetriz" FontSize="18" BackgroundColor="White"/>
         <Button x:Name="publikationerBTN" Text="Publikationer" FontSize="18" BackgroundColor="White"/>
-        <Button x:Name="Admin" Text="Admin" FontSize="18" BackgroundColor="White"/>
+        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand">
+            <Button x:Name="AdminBtn" Image="adminbtn" BackgroundColor="White"/>
+        </StackLayout>
     </StackLayout>
     
 </ContentPage>

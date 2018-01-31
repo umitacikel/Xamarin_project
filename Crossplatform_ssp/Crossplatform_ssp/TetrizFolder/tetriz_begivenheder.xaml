@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Crossplatform_ssp.TetrizFolder.tetriz_begivenheder"
              Title="Begivenheder" Icon="ic_event.png">
+
     <ListView ItemsSource="{Binding .}" x:Name="listviewTetrizBegivenhed" HasUnevenRows="true" SeparatorVisibility="None"
                IsPullToRefreshEnabled="True" Refreshing="listviewTetrizBegivenhed_RefreshingAsync">
         <ListView.ItemTemplate>

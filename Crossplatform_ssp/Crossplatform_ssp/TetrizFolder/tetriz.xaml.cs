@@ -26,8 +26,9 @@ namespace Crossplatform_ssp
             this.Children.Add(tetriz_face);
             this.Children.Add(tetriz_med);
 
-
+            this.BarBackgroundColor = Color.FromHex("#29B19D");
+            this.BarTextColor = Color.White;
 
         }
-	}
+    }
 }

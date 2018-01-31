@@ -4,6 +4,7 @@ using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Rg.Plugins.Popup.Pages;
+using Rg.Plugins.Popup.Extensions;
 namespace Crossplatform_ssp.AdminFolder
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -13,7 +14,7 @@ namespace Crossplatform_ssp.AdminFolder
 
         PopupPage pop = new PopupPage()
         {
-            BackgroundColor = Color.White
+            BackgroundColor = Color.White,     
         };
         static  Entry personale_navn = new Entry
         {
@@ -49,8 +50,9 @@ namespace Crossplatform_ssp.AdminFolder
         StackLayout Opret_lay = new StackLayout()
         {
             VerticalOptions = LayoutOptions.Center,
-            HorizontalOptions = LayoutOptions.Fill,
+            HorizontalOptions = LayoutOptions.Center,
             Orientation = StackOrientation.Vertical,
+            Spacing = 20,
             Children =
           {personale_billede, personale_navn, personale_stilling, personale_email, personale_nummer, personale_uploadBtn, personale_opretBtn }
         };
@@ -60,9 +62,10 @@ namespace Crossplatform_ssp.AdminFolder
            
             opretPersonale.Clicked += async (sender, e) =>
             {
-                
+                opretPersonale.IsEnabled = false;
+            
                 pop.Content = Opret_lay;
-                await Navigation.PushModalAsync(pop, false);
+                await Navigation.PushPopupAsync(pop);
                 personale_navn.Text = "";
                 personale_stilling.Text = "";
                 personale_email.Text = "";
@@ -70,6 +73,7 @@ namespace Crossplatform_ssp.AdminFolder
                 imgstr = null;
                 personale_uploadBtn.Clicked += async (sende, i) =>
                 {
+                    personale_uploadBtn.IsEnabled = false;
                     try
                     {
                         await CrossMedia.Current.Initialize();
@@ -109,8 +113,10 @@ namespace Crossplatform_ssp.AdminFolder
                         var person = new DatabaseFolder.DatabaseTCPersonale(personale_navn.Text, personale_stilling.Text, personale_email.Text, personale_nummer.Text);
 
                         await fire.saveImageAsync(imgstr, person);
-                        await Navigation.PopModalAsync();
-                        Navigation.RemovePage(pop);
+                        await Navigation.PopPopupAsync();
+                        opretPersonale.IsEnabled = true;
+                        personale_uploadBtn.IsEnabled = true;
+
                     }
                     catch (Exception ex)
                     {
@@ -125,9 +131,9 @@ namespace Crossplatform_ssp.AdminFolder
 
             OpretPersonaleSSP.Clicked += async (sender, e) =>
             {
-
+                opretPersonale.IsEnabled = false;
                 pop.Content = Opret_lay;
-                await Navigation.PushModalAsync(pop, false);
+                await Navigation.PushPopupAsync(pop);
                 personale_navn.Text = "";
                 personale_stilling.Text = "";
                 personale_email.Text = "";
@@ -135,6 +141,7 @@ namespace Crossplatform_ssp.AdminFolder
                 imgstr = null;
                 personale_uploadBtn.Clicked += async (sende, i) =>
                 {
+                    personale_uploadBtn.IsEnabled = false;
                     try
                     {
                         await CrossMedia.Current.Initialize();
@@ -168,14 +175,17 @@ namespace Crossplatform_ssp.AdminFolder
 
                 personale_opretBtn.Clicked += async (sendr, a) =>
                 {
+
                     try
                     {
                         var fire = new FirebaseFolder.FirebaseSSPPersonale();
                         var person = new DatabaseFolder.DatabaseTCPersonale(personale_navn.Text, personale_stilling.Text, personale_email.Text, personale_nummer.Text);
 
                         await fire.saveImageAsync(imgstr, person);
-                        await Navigation.PopModalAsync();
-                        Navigation.RemovePage(pop);
+                        await Navigation.PopPopupAsync();
+
+                        opretPersonale.IsEnabled = true;
+                        personale_uploadBtn.IsEnabled = true;
                     }
                     catch (Exception ex)
                     {
@@ -186,7 +196,7 @@ namespace Crossplatform_ssp.AdminFolder
 
 
             };
-
         }
+
     }
 }

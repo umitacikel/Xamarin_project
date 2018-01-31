@@ -26,10 +26,6 @@ namespace Crossplatform_ssp.SSPFolder
         public Fritidspas ()
 		{
 			InitializeComponent ();
-
-
-
-            
         }
 
         private void folderBtn_clicked(object sender, EventArgs e)

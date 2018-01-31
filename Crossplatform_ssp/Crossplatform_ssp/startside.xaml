@@ -4,18 +4,23 @@
              x:Class="Crossplatform_ssp.startside"
              Title="Startside"
              BackgroundColor="White">
-
+  
     <StackLayout>
-        <StackLayout Orientation="Horizontal">
-            <Button x:Name="startSSPBtn" BackgroundColor="White" Image="sspicon" />
-            <Button x:Name="startCubeBtn" BackgroundColor="White" Image="cubeicon"/>
+        <Label x:Name="lbl_NoInternet" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="Red"/>
+        <StackLayout Orientation="Horizontal" >
+            <Button x:Name="startCubeBtn" BackgroundColor="White" Image="cubeLogo"/>
+            <Button x:Name="startSSPBtn" BackgroundColor="White" Image="sspLogo" />
         </StackLayout>
-        <StackLayout Orientation="Horizontal">
-            <Button x:Name="startTetrizBtn" BackgroundColor="White" Image="tetrizicon"/>
-            <Button x:Name="startPubBtn" Text="Publikationer" BackgroundColor="White"/>
+        <StackLayout Orientation="Horizontal" >
+            <Button x:Name="startTetrizBtn" BackgroundColor="White" Image="tetrizLogo"/>
+            <Button x:Name="startPubBtn" BackgroundColor="White" Image="folderLogo"/>
         </StackLayout>
-        <Button x:Name="AdminsideBtn" Text="AdminSide" BackgroundColor="White"/>
+        <StackLayout VerticalOptions="EndAndExpand">
+            <Image Source="sspstartny"  />
+        </StackLayout>
     </StackLayout>
+   
+
+
 </ContentPage>
-    
-    
+

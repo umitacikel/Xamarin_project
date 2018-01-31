@@ -79,9 +79,6 @@ namespace Crossplatform_ssp.SSPFolder
 		{
 			InitializeComponent ();
 
-           
-           
-
             annullerBtn.Clicked += (o, i) =>
             {
                 Navigation.PopModalAsync();
@@ -142,5 +139,6 @@ namespace Crossplatform_ssp.SSPFolder
             listviewungråd.BindingContext = await FbClientUngRåd.GetUngrådList();
             listviewungråd.IsRefreshing = false;
         }
+
     }
 }

@@ -16,5 +16,6 @@ namespace Crossplatform_ssp.AdminFolder
 		{
 			InitializeComponent ();
 		}
-	}
+
+    }
 }
