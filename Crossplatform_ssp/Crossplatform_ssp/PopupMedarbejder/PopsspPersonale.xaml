@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Crossplatform_ssp.PopupMedarbejder.PopsspPersonale">
+    <ContentPage.Content>
+
+        <ListView ItemsSource="{Binding .}" x:Name="listviewPersonale" HasUnevenRows="true" SeparatorVisibility="None"
+               IsPullToRefreshEnabled="True" Refreshing="listviewPersonale_Refreshing" >
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <ViewCell >
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Delete" Clicked="deleteClicked" IsDestructive="True" CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
+                        <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding Billede}" HorizontalOptions="FillAndExpand" HeightRequest="150" WidthRequest="150" Aspect="AspectFit"/>
+                                <StackLayout Spacing="5" Padding="20" Orientation="Vertical" >
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Navn:" FontSize="16"/>
+                                        <Label Text="{Binding Navn}" FontSize="16" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Stilling:" FontSize="16"/>
+                                        <Label Text="{Binding Stilling}" FontSize="16"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Nummer:" FontSize="16"/>
+                                        <Label Text="{Binding Nummer}" FontSize="16"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Email:" FontSize="16"/>
+                                        <Label Text="{Binding Email}" FontSize="16"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

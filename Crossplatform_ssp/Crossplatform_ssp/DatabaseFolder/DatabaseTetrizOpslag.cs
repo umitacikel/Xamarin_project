@@ -7,6 +7,7 @@ namespace Crossplatform_ssp.DatabaseFolder
 {
     public class DatabaseTetrizOpslag
     {
+        public String key { get; set; }
         public String T_OpslagEmne { get; set; }
         public String T_OpslagBesked { get; set; }
 

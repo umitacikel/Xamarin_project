@@ -24,6 +24,7 @@ namespace Crossplatform_ssp.FirebaseFolder
                 .Select((item) =>
                 new DatabaseFolder.DatabaseCubeOpslag
                 {
+                    key = item.Key,
                     C_OpslagEmne = item.Object.C_OpslagEmne,
                     C_OpslagBesked  = item.Object.C_OpslagBesked
                 }).ToList();
@@ -34,6 +35,38 @@ namespace Crossplatform_ssp.FirebaseFolder
             await FbClient
                 .Child("CubeOpslag")
                 .PostAsync(opslag);
+        }
+
+        public async Task<bool> getUpdateAsync(String key, DatabaseFolder.DatabaseCubeOpslag opslag)
+        {
+            try
+            {
+                await FbClient
+                         .Child("CubeOpslag/" + key)
+                         .PutAsync<DatabaseFolder.DatabaseCubeOpslag>(opslag);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> getDeleteBegAsync(String key)
+        {
+            try
+            {
+                await FbClient
+                         .Child("CubeOpslag/" + key)
+                         .DeleteAsync();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
     }
 }

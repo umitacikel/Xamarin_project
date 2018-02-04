@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Crossplatform_ssp.PopupPages.PopupCubeOpslag">
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding .}"  x:Name="listviewCubeOpslag" HasUnevenRows="true"  SeparatorVisibility="None"
+             IsPullToRefreshEnabled="True" Refreshing="listviewCubeOpslag_RefreshingAsync"  >
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <ViewCell >
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Update" Clicked="updateClicked" CommandParameter="{Binding .}"/>
+                            <MenuItem Text="Delete" Clicked="deleteClicked" IsDestructive="True" CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
+                        <StackLayout Spacing="10" Padding="20">
+                                <Label Text="{Binding C_OpslagEmne}" Font="Bold, 20"/>
+                                <Label Text="{Binding C_OpslagBesked}" FontSize="16"/>
+                            </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

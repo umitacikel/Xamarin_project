@@ -7,6 +7,7 @@ namespace Crossplatform_ssp.DatabaseFolder
 {
     public class DatabaseSSPUngRåd
     {
+        public String key { get; set; }
         public String UngRåd_Titel { get; set; }
         public string UngRåd_Tekst { get; set; }
 

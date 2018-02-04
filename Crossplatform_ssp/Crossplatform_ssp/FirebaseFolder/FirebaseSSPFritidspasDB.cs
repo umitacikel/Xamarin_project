@@ -22,9 +22,27 @@ namespace Crossplatform_ssp.FirebaseFolder
                 .Select((item) =>
                 new DatabaseFolder.DatabaseSSPFritidspas
                 {
+                    key = item.Key,
                     Fritidspas_Titel = item.Object.Fritidspas_Titel,
                     Fritidspas_Tekst = item.Object.Fritidspas_Tekst
                 }).ToList();
+        }
+
+        public async Task<bool> getUpdateAsync(String key, DatabaseFolder.DatabaseSSPFritidspas opslag)
+        {
+            try
+            {
+                await FbClient
+                         .Child("SSPFriPas/" + key)
+                         .PutAsync<DatabaseFolder.DatabaseSSPFritidspas>(opslag);
+
+                return true;
+            }
+            catch 
+            {
+                
+                return false;
+            }
         }
     }
 }

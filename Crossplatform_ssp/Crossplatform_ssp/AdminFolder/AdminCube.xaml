@@ -4,9 +4,13 @@
              x:Class="Crossplatform_ssp.AdminFolder.AdminCube"
              Title="Cube">
 
+
     <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
         <Button Text="Opret Cube Begivenhed" x:Name="opretCBBtn" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-      <Button Text="Opret Cube Opslag" x:Name="opretCOBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+        <Button Text="Opret Cube Opslag" x:Name="opretCOBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+        <Button Text="Opdater Cube Begivenheder" Clicked="cubeBeg" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+        <Button Text="Opdater Cube Opslag" Clicked="cubeOpslag" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+
     </StackLayout>
 
     

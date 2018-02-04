@@ -6,6 +6,7 @@ namespace Crossplatform_ssp.DatabaseFolder
 {
     public class DatabaseTetrizBegivenhed
     {
+        public String key { get; set; }
         public String T_BegivenhedEmne { get; set; }
         public String T_BegivenhedBesked { get; set; }
 

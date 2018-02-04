@@ -7,7 +7,7 @@ namespace Crossplatform_ssp.DatabaseFolder
 {
     public class DatabaseSSPFritidspas
     {
-       
+        public String key { get; set; }
         public String Fritidspas_Titel { get; set; }
         public string Fritidspas_Tekst { get; set; }
 

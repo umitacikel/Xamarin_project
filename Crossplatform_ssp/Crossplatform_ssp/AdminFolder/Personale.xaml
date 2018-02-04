@@ -5,5 +5,8 @@
     <StackLayout >
         <Button x:Name="opretPersonale" Text="opret tetriz cube personale"/>
         <Button x:Name="OpretPersonaleSSP" Text="Opret ssp personale"/>
+
+        <Button Text="Slet Tetriz/Cube Personale" Clicked="tcpersonale"/>
+        <Button Text="Slet SSP Personale" Clicked="sspPersonale"/>
     </StackLayout>
 </ContentPage>

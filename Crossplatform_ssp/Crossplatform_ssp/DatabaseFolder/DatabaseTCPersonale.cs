@@ -7,6 +7,7 @@ namespace Crossplatform_ssp.DatabaseFolder
 {
     public class DatabaseTCPersonale
     {
+        public String key { get; set; }
         public String Navn { get; set; }
         public String Stilling { get; set; }
         public String Email { get; set; }

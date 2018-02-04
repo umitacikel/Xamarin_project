@@ -7,6 +7,7 @@ namespace Crossplatform_ssp.DatabaseFolder
 {
     public class DatabaseCubeBegivenhed
     {
+        public String key { get; set; }
         public String C_BegivenhedEmne { get; set; }
         public String C_BegivenhedBesked { get; set; }
 

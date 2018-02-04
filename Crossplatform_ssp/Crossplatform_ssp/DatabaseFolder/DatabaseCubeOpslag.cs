@@ -7,7 +7,7 @@ namespace Crossplatform_ssp.DatabaseFolder
 {
     public class DatabaseCubeOpslag
     {
-       
+        public String key { get; set; }
         public String C_OpslagEmne { get; set; }
         public String C_OpslagBesked { get; set; }
 

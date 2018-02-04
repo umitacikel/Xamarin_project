@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Crossplatform_ssp.SSPFolder
+namespace Crossplatform_ssp.PopupMedarbejder
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SSPPersonale : ContentPage
+	public partial class PopsspPersonale : ContentPage
 	{
         FirebaseFolder.FirebaseSSPPersonale fbPersonale = new FirebaseFolder.FirebaseSSPPersonale();
 
@@ -20,16 +20,25 @@ namespace Crossplatform_ssp.SSPFolder
             var list = await fbPersonale.GetPersonale();
             listviewPersonale.BindingContext = list;
         }
-        public SSPPersonale ()
+        public PopsspPersonale ()
 		{
 			InitializeComponent ();
 		}
+
         private async Task listviewPersonale_Refreshing(object sender, EventArgs e)
         {
             listviewPersonale.BindingContext = await fbPersonale.GetPersonale();
             listviewPersonale.IsRefreshing = false;
         }
 
-       
+        async void deleteClicked(object sender, EventArgs e)
+        {
+            var mItem = sender as MenuItem;
+            var data = (DatabaseFolder.DatabaseTCPersonale)mItem.CommandParameter;
+            var result = await fbPersonale.getDeleteBegAsync(data.key);
+
+            if (result) await DisplayAlert("Success", "Enheden er blevet slettet", "ok");
+            else await DisplayAlert("Fejl", "Enheden blev ikke slettet, prøv igen", "ok");
+        }
     }
 }

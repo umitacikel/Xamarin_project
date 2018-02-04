@@ -198,5 +198,15 @@ namespace Crossplatform_ssp.AdminFolder
             };
         }
 
+
+        void tcpersonale(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PopupMedarbejder.PoptcPersonale());
+        }
+
+        void sspPersonale(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PopupMedarbejder.PopsspPersonale());
+        }
     }
 }

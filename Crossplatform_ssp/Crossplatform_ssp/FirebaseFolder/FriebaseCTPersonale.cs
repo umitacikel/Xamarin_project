@@ -48,12 +48,29 @@ namespace Crossplatform_ssp.FirebaseFolder
                 .Select((item) =>
                 new DatabaseFolder.DatabaseTCPersonale
                 {
+                  key = item.Key,
                   Navn = item.Object.Navn,
                   Stilling = item.Object.Stilling,
                   Nummer = item.Object.Nummer,
                   Email = item.Object.Email,
                   Billede = item.Object.Billede
                 }).ToList();
+        }
+
+        public async Task<bool> getDeleteBegAsync(String key)
+        {
+            try
+            {
+                await client
+                         .Child("TCPersonale/" + key)
+                         .DeleteAsync();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
     }
 }

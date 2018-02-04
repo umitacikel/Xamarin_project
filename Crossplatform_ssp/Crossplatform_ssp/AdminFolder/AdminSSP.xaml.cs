@@ -23,5 +23,15 @@ namespace Crossplatform_ssp.AdminFolder
 
         }
 
+        void updateFripas()
+        {
+            Navigation.PushAsync(new PopupSSP.PopupFritids());
+        }
+
+        void updateUngeråd()
+        {
+            Navigation.PushAsync(new PopupSSP.PopupUngråd());
+        }
+
     }
 }

@@ -7,5 +7,7 @@
     <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
         <Button Text="Opret Tetriz Begivenhed" x:Name="opretTBBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
         <Button Text="Opret Tetriz Opslag" x:Name="opretTOBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+        <Button Text="Opdater Tetriz Begivenheder" Clicked="tetBeg" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+        <Button Text="Opdater Tetriz Opslag" Clicked="tetOpslag" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
     </StackLayout>
 </ContentPage>

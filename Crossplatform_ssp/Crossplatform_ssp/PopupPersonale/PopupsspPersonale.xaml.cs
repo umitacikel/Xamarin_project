@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Crossplatform_ssp.SSPFolder
+namespace Crossplatform_ssp.PopupPersonale
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SSPPersonale : ContentPage
+	public partial class PopupsspPersonale : ContentPage
 	{
         FirebaseFolder.FirebaseSSPPersonale fbPersonale = new FirebaseFolder.FirebaseSSPPersonale();
 
@@ -20,7 +20,7 @@ namespace Crossplatform_ssp.SSPFolder
             var list = await fbPersonale.GetPersonale();
             listviewPersonale.BindingContext = list;
         }
-        public SSPPersonale ()
+        public PopupsspPersonale ()
 		{
 			InitializeComponent ();
 		}
@@ -29,7 +29,5 @@ namespace Crossplatform_ssp.SSPFolder
             listviewPersonale.BindingContext = await fbPersonale.GetPersonale();
             listviewPersonale.IsRefreshing = false;
         }
-
-       
     }
 }
