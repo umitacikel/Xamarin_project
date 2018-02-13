@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace Crossplatform_ssp.Droid
 {
-	[Activity (Label = "Crossplatform_ssp", 
+	[Activity (Label = "SSP", 
         Icon = "@drawable/sspLogo", 
         Theme="@style/MainTheme",
         MainLauncher = false, 
