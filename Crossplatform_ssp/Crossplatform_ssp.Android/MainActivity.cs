@@ -12,7 +12,7 @@ namespace Crossplatform_ssp.Droid
 	[Activity (Label = "Crossplatform_ssp", 
         Icon = "@drawable/sspLogo", 
         Theme="@style/MainTheme",
-        MainLauncher = true, 
+        MainLauncher = false, 
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
