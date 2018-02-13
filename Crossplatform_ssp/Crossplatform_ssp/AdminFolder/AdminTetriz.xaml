@@ -3,11 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Crossplatform_ssp.AdminFolder.AdminTetriz"
              Title="Tetriz">
-
-    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
-        <Button Text="Opret Tetriz Begivenhed" x:Name="opretTBBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
-        <Button Text="Opret Tetriz Opslag" x:Name="opretTOBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
-        <Button Text="Opdater Tetriz Begivenheder" Clicked="tetBeg" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
-        <Button Text="Opdater Tetriz Opslag" Clicked="tetOpslag" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
-    </StackLayout>
+    <ScrollView>
+    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="Fill" Orientation="Vertical">
+        <Button Text="Opret Tetriz Begivenhed" Clicked="stackBegiTrue" VerticalOptions="Center" HorizontalOptions="Fill" />
+        <Button Text="Opret Tetriz Opslag" Clicked="stackOpslTrue" VerticalOptions="Center" HorizontalOptions="Fill" />
+        <Button Text="Opdater Tetriz Begivenheder" Clicked="tetBeg" VerticalOptions="Center" HorizontalOptions="Fill"/>
+        <Button Text="Opdater Tetriz Opslag" Clicked="tetOpslag" VerticalOptions="Center" HorizontalOptions="Fill"/>
+            <StackLayout IsVisible="False" x:Name="stackBeg">
+                <Entry x:Name="entryBeg" HorizontalOptions="Fill" VerticalOptions="Start" Margin="10" Placeholder="Begivenhed Emne"/>
+                <Editor x:Name="editorBeg" HorizontalOptions="Fill" HeightRequest="200" Margin="10"/>
+                <Button Text="Opret Tetriz Begivenhed" Clicked="OpretBegivenhedTetriz"/>
+                <Button Text="Afslut" Clicked="stackBegiFalse"/>
+            </StackLayout >
+            <StackLayout IsVisible="False" x:Name="stackOps">
+                <Entry x:Name="entryOps" HorizontalOptions="Fill" VerticalOptions="Start" Margin="10" Placeholder="Opslag Emne"/>
+                <Editor x:Name="editorOps" HorizontalOptions="Fill" HeightRequest="200" Margin="10" />
+                <Button Text="Opret Tetriz Opslag" Clicked="OpretOpslagTetriz"/>
+                <Button Text="Afslut" Clicked="stackOpslFalse"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

@@ -4,16 +4,27 @@
              x:Class="Crossplatform_ssp.AdminFolder.AdminCube"
              Title="Cube">
 
-
-    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
-        <Button Text="Opret Cube Begivenhed" x:Name="opretCBBtn" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-        <Button Text="Opret Cube Opslag" x:Name="opretCOBtn" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
-        <Button Text="Opdater Cube Begivenheder" Clicked="cubeBeg" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
-        <Button Text="Opdater Cube Opslag" Clicked="cubeOpslag" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
-
+    <ScrollView >
+    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="Fill" Orientation="Vertical">
+        <Button Text="Opret Cube Begivenhed" Clicked="stackBegiTrue" VerticalOptions="CenterAndExpand" HorizontalOptions="Fill"/>
+        <Button Text="Opret Cube Opslag" Clicked="stackOpslTrue" VerticalOptions="Center" HorizontalOptions="Fill" />
+        <Button Text="Opdater Cube Begivenheder" Clicked="cubeBeg" VerticalOptions="Center" HorizontalOptions="Fill"/>
+        <Button Text="Opdater Cube Opslag" Clicked="cubeOpslag" VerticalOptions="Center" HorizontalOptions="Fill"/>
+        <StackLayout IsVisible="False" x:Name="stackBeg">
+            <Entry x:Name="entryBeg" HorizontalOptions="Fill" VerticalOptions="Start" Margin="10" Placeholder="Begivenhed Emne"/>
+            <Editor x:Name="editorBeg" HorizontalOptions="Fill" HeightRequest="200" Margin="10"/>
+            <Button Text="Opret Cube Begivenhed" Clicked="begivenhedOpretCube"/>
+            <Button Text="Afslut" Clicked="stackBegiFalse"/>
+        </StackLayout >
+        <StackLayout IsVisible="False" x:Name="stackOps">
+            <Entry x:Name="entryOps" HorizontalOptions="Fill" VerticalOptions="Start" Margin="10" Placeholder="Opslag Emne"/>
+            <Editor x:Name="editorOps" HorizontalOptions="Fill" HeightRequest="200" Margin="10" />
+            <Button Text="Opret Cube Opslag" Clicked="opslagOpretCube"/>
+            <Button Text="Afslut" Clicked="stackOpslFalse"/>
+        </StackLayout>
     </StackLayout>
+    </ScrollView>
 
-    
 
 
 </ContentPage>
