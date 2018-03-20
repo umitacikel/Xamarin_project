@@ -2,11 +2,40 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Crossplatform_ssp.AdminFolder.Personale" Title="Personale">
+    <ScrollView>
     <StackLayout >
-        <Button x:Name="opretPersonale" Text="opret tetriz cube personale"/>
-        <Button x:Name="OpretPersonaleSSP" Text="Opret ssp personale"/>
+        <Button x:Name="opretPersonale" Text="opret tetriz cube personale" Clicked="tc_visibilty"/>
+        <StackLayout x:Name="tetcubStack" IsVisible="False">
+            <Entry x:Name="tc_navn" Placeholder="Navn"/>
+            <Entry x:Name="tc_stilling" Placeholder="Stilling"/>
+            <Entry x:Name="tc_email" Placeholder="Email"/>
+            <Entry x:Name="tc_nummer" Placeholder="Nummer"/>
+            <Image x:Name="tc_billede" />
+            <Button x:Name="tc_uploadBillede" Text="Upload Billede" Clicked="tc_uploadBilledeFunc"/>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="tc_opret" Text="Opret" Clicked="tc_opretPersonale"/>
+                <Button x:Name="tc_annuller" Text="Annuller"/>
+            </StackLayout>
+        </StackLayout>
+        
+        
+        <Button x:Name="OpretPersonaleSSP" Text="Opret ssp personale" Clicked="ssp_visibilty"/>
+        <StackLayout x:Name="sspStack" IsVisible="False">
+            <Entry x:Name="ssp_navn" Placeholder="Navn"/>
+            <Entry x:Name="ssp_stilling" Placeholder="Stilling"/>
+            <Entry x:Name="ssp_email" Placeholder="Email"/>
+            <Entry x:Name="ssp_nummer" Placeholder="Nummer"/>
+            <Image x:Name="ssp_billede" />
+            <Button x:Name="ssp_uploadBillede" Text="Upload Billede" Clicked="ssp_uploadBilledeFunc"/>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="ssp_opret" Text="Opret" Clicked="ssp_opretPersonale"/>
+                <Button x:Name="ssp_annuller" Text="Annuller"/>
+            </StackLayout>
+        </StackLayout>
+
 
         <Button Text="Slet Tetriz/Cube Personale" Clicked="tcpersonale"/>
         <Button Text="Slet SSP Personale" Clicked="sspPersonale"/>
     </StackLayout>
+    </ScrollView>
 </ContentPage>
