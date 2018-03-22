@@ -2,18 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Crossplatform_ssp.master"
+             Icon="menu.png"
              Title="Master"
-             Icon="menu.png">
+             BackgroundColor="White">
 
-    
-    <StackLayout >
-        <Button x:Name="sspBTN" Text="SSP" FontSize="18" BackgroundColor="White"/>
-        <Button x:Name="cubeBTN" Text="Cube" FontSize="18" BackgroundColor="White"/>
-        <Button x:Name="tetrizBTN" Text="Tetriz" FontSize="18" BackgroundColor="White"/>
-        <Button x:Name="publikationerBTN" Text="Publikationer" FontSize="18" BackgroundColor="White"/>
-        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand">
+    <Grid Padding="5,10">
+        <Button x:Name="sspBTN" Text="SSP" FontSize="18"  BackgroundColor="White" Grid.Row="1"/>
+        <Button x:Name="cubeBTN" Text="Cube" FontSize="18" BackgroundColor="White" Grid.Row="2"/>
+        <Button x:Name="tetrizBTN" Text="Tetriz" FontSize="18" BackgroundColor="White" Grid.Row="3"/>
+        <Button x:Name="publikationerBTN" Text="Publikationer" FontSize="18" BackgroundColor="White" Grid.Row="4"/>
+        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" Grid.Row="5">
             <Button x:Name="AdminBtn" Image="adminbtn" BackgroundColor="White"/>
         </StackLayout>
-    </StackLayout>
-    
+    </Grid>
 </ContentPage>
+
