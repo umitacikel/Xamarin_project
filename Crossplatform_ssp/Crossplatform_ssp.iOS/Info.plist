@@ -32,8 +32,6 @@
 	<string>LaunchScreen</string>
 	<key>XSAppIconAssets</key>
 	<string>Resources/Media.xcassets/AppIcon.appiconset</string>
-	<key>XSLaunchImageAssets</key>
-	<string>Resources/Media.xcassets/LaunchImage.launchimage</string>
 	<key>CFBundleName</key>
 	<string>SSP Helsingør</string>
 </dict>
