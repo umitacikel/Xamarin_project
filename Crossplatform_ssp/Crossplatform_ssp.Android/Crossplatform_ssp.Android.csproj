@@ -237,6 +237,11 @@
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\Icon.png" />
     <AndroidResource Include="Resources\Drawable\hamburger.png" />
+    <AndroidResource Include="Resources\Drawable\ic_group.png" />
+    <AndroidResource Include="Resources\Drawable\ic_Fil.png" />
+    <AndroidResource Include="Resources\Drawable\ic_call1.png" />
+    <AndroidResource Include="Resources\Drawable\ic_help.png" />
+    <AndroidResource Include="Resources\Drawable\ic_chat.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />

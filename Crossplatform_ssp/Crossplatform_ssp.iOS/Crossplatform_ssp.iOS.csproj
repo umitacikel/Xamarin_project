@@ -143,6 +143,11 @@
     <BundleResource Include="Resources\SplashScreen Ex2.png" />
     <BundleResource Include="Resources\icon_iphone_ios7_retina.png" />
     <BundleResource Include="Resources\hamburger.png" />
+    <BundleResource Include="Resources\ic_group.png" />
+    <BundleResource Include="Resources\ic_Fil.png" />
+    <BundleResource Include="Resources\ic_call1.png" />
+    <BundleResource Include="Resources\ic_help.png" />
+    <BundleResource Include="Resources\ic_chat.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="CircleMenu, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -256,15 +261,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_tab_3x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ic_supervisor_account.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ic_supervisor_account_2x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ic_supervisor_account_3x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_public.png" />
