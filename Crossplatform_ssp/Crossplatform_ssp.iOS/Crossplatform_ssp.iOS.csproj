@@ -142,6 +142,7 @@
     <BundleResource Include="Resources\Icon-Small%403x.png" />
     <BundleResource Include="Resources\SplashScreen Ex2.png" />
     <BundleResource Include="Resources\icon_iphone_ios7_retina.png" />
+    <BundleResource Include="Resources\hamburger.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="CircleMenu, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -303,6 +304,10 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\adminbtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
   </ItemGroup>
   <Import Project="..\Crossplatform_ssp\Crossplatform_ssp.projitems" Label="Shared" Condition="Exists('..\Crossplatform_ssp\Crossplatform_ssp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
