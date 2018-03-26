@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="SplashScreen Ex2.png" width="1242" height="2208"/>
+        <image name="icon_iphone_ios7_retina.png" width="120" height="120"/>
+        <image name="hamburger.png" width="14" height="15"/>
+        <image name="ic_group.png" width="24" height="24"/>
+        <image name="ic_Fil.png" width="24" height="24"/>
+        <image name="ic_call1.png" width="50" height="50"/>
+        <image name="ic_help.png" width="50" height="50"/>
+        <image name="ic_chat.png" width="24" height="24"/>
+        <image name="menu.png" width="512" height="512"/>
+        <image name="ic_event.png" width="24" height="24"/>
+        <image name="ic_event_2x.png" width="48" height="48"/>
+        <image name="ic_event_3x.png" width="72" height="72"/>
+        <image name="ic_tab.png" width="24" height="24"/>
+        <image name="ic_tab_2x.png" width="48" height="48"/>
+        <image name="ic_tab_3x.png" width="72" height="72"/>
+        <image name="ic_public.png" width="24" height="24"/>
+        <image name="ic_public_2x.png" width="48" height="48"/>
+        <image name="ic_public_3x.png" width="72" height="72"/>
+        <image name="Telefon.png" width="64" height="64"/>
+        <image name="Email.png" width="64" height="64"/>
+        <image name="Folder.png" width="64" height="64"/>
+        <image name="cubeLogo.png" width="127" height="136"/>
+        <image name="tetrizLogo.png" width="204" height="113"/>
+        <image name="sspLogo.png" width="185" height="138"/>
+        <image name="ssp_logoer.png" width="420" height="595"/>
+        <image name="folderLogo.png" width="128" height="128"/>
+        <image name="sspstartny.png" width="406" height="137"/>
+        <image name="adminbtn.png" width="32" height="32"/>
+    </resources>
+</document>

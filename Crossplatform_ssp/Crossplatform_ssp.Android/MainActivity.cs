@@ -10,7 +10,7 @@ using Android.OS;
 namespace Crossplatform_ssp.Droid
 {
 	[Activity (Label = "SSP", 
-        Icon = "@drawable/sspLogo", 
+        Icon = "@drawable/ic_launcher", 
         Theme="@style/MainTheme",
         MainLauncher = false, 
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
