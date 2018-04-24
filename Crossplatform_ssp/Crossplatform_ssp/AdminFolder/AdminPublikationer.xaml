@@ -3,5 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Crossplatform_ssp.AdminFolder.AdminPublikationer"
              Title="Publikationer">
-
+    <StackLayout>
+        <Entry x:Name="pdfnavn"  Placeholder="Navn"/>
+        <Entry x:Name="pdflink"  Placeholder="Link"/>
+        <Image x:Name="ForsideBillede"/>
+        <Button x:Name="uploadbtn" Text="Upload" Clicked="uploadBillede"/>
+        <Button x:Name="gembtn" Text="gem" Clicked="opretFolder"/>
+    </StackLayout>
 </ContentPage>

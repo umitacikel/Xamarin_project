@@ -13,16 +13,14 @@ namespace Crossplatform_ssp
 	{
 		public cube ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
 
             var cube_opslag = new CubeFolder.cube_opslag();
             var cube_beg = new CubeFolder.cube_begivenheder();
-            var cube_face = new CubeFolder.cube_face();
             var cube_med = new CubeFolder.cube_medarbejder();
 
             this.Children.Add(cube_opslag);
             this.Children.Add(cube_beg);
-            this.Children.Add(cube_face);
             this.Children.Add(cube_med);
 
             this.BarBackgroundColor = Color.FromHex("#29B19D");

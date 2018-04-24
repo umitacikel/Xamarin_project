@@ -50,6 +50,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseFolder\DatabaseCubeBegivenhedController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseFolder\DatabaseCubeOpslag.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseFolder\DatabaseCubeOpslagController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DatabaseFolder\DatabasePublikationer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseFolder\DatabaseSSPFritidspas.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseFolder\DatabaseSSPFritidspassController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseFolder\DatabaseSSPUngRåd.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseFolder\ISQLite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseCubeBegivenhederDB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseCubeOpslagDB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebasePublikationerDB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseSSPFritidspasDB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseSSPPersonale.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseSSPUngerådDB.cs" />

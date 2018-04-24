@@ -49,7 +49,7 @@ namespace Crossplatform_ssp.AdminFolder
                 {
                     var file = await CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions()
                     {
-
+                      
                     });
 
                     if (file != null)

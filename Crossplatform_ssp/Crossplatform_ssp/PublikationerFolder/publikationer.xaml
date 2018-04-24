@@ -4,5 +4,24 @@
              x:Class="Crossplatform_ssp.publikationer"
              Title="Publikationer"
              BackgroundColor="WhiteSmoke">
+    <ListView ItemsSource="{Binding .}" x:Name="listviewPubli" HasUnevenRows="true" SeparatorVisibility="None"
+               IsPullToRefreshEnabled="True" Refreshing="listview_Refreshing">
+        <ListView.ItemTemplate>
+            <DataTemplate >
+                <ViewCell >
+                    <ViewCell.View>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{Binding ForsideBillede}" HorizontalOptions="FillAndExpand" HeightRequest="150" WidthRequest="150" Aspect="AspectFit"/>
+                            <StackLayout Spacing="5" Padding="20" >
+                                <Label Text="{Binding Navn}"  FontSize="16" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+
 
 </ContentPage>

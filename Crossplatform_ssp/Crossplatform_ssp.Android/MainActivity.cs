@@ -24,7 +24,7 @@ namespace Crossplatform_ssp.Droid
 			base.OnCreate (bundle);
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
-			LoadApplication (new Crossplatform_ssp.App ());
+			LoadApplication(new Crossplatform_ssp.App());
 		}
 	}
 }
