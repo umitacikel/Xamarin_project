@@ -15,6 +15,8 @@ namespace Crossplatform_ssp.StartsideFolder
 		public Startsidecube ()
 		{
 			InitializeComponent ();
-		}
+
+
+        }
 	}
 }

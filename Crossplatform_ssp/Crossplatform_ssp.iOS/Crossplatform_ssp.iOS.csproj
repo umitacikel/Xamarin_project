@@ -333,6 +333,15 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\startsidec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\startsides.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\startsidet.png" />
+  </ItemGroup>
   <Import Project="..\Crossplatform_ssp\Crossplatform_ssp.projitems" Label="Shared" Condition="Exists('..\Crossplatform_ssp\Crossplatform_ssp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />

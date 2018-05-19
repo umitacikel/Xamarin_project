@@ -14,7 +14,6 @@ namespace Crossplatform_ssp.StartsideFolder
             Children.Add(new Startsidessp());
             Children.Add(new Startsidecube());
             Children.Add(new Startsidetetriz());
-            Children.Add(new Startsidepublikationer());
 		}
 	}
 }
