@@ -71,16 +71,19 @@ namespace Crossplatform_ssp.AdminFolder
         async void tc_opretPersonale(object sender, EventArgs e) {
             try
             {
+                activityind.IsRunning = true;
                 var fire = new FirebaseFolder.FriebaseCTPersonale();
                 var person = new DatabaseFolder.DatabaseTCPersonale(tc_navn.Text, tc_stilling.Text, tc_email.Text, tc_nummer.Text);
 
                 await fire.saveImageAsync(tc_imgstr, person);
-                await DisplayAlert("Success", "Personale er blevet uploadet", "Ok");
                 tc_navn.Text = "";
                 tc_stilling.Text = "";
                 tc_email.Text = "";
                 tc_nummer.Text = "";
                 tc_imgstr = null;
+                activityind.IsRunning = false;
+                await DisplayAlert("Success", "Personale er blevet uploadet", "Ok");
+
             }
             catch (Exception ex)
             {
@@ -133,16 +136,18 @@ namespace Crossplatform_ssp.AdminFolder
         {
             try
             {
+                activityind.IsRunning = true;
                 var fire = new FirebaseFolder.FirebaseSSPPersonale();
                 var person = new DatabaseFolder.DatabaseTCPersonale(ssp_navn.Text, ssp_stilling.Text, ssp_email.Text, ssp_nummer.Text);
 
                 await fire.saveImageAsync(ssp_imgstr, person);
-                await DisplayAlert("Success", "Personale er blevet uploadet", "Ok");
                 ssp_navn.Text = "";
                 ssp_stilling.Text = "";
                 ssp_email.Text = "";
                 ssp_nummer.Text = "";
                 ssp_imgstr = null;
+                activityind.IsRunning = false;
+                await DisplayAlert("Success", "Personale er blevet uploadet", "Ok");
             }
             catch (Exception ex)
             {

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Crossplatform_ssp.AdminFolder.Personale" Title="Personale">
     <ScrollView>
-    <StackLayout >
+        <ActivityIndicator x:Name="activityind"/>
+        <StackLayout >
         <Button x:Name="opretPersonale" Text="opret tetriz cube personale" Clicked="tc_visibilty"/>
         <StackLayout x:Name="tetcubStack" IsVisible="False">
             <Entry x:Name="tc_navn" Placeholder="Navn"/>

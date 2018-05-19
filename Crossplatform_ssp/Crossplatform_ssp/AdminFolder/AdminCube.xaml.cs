@@ -45,11 +45,12 @@ namespace Crossplatform_ssp.AdminFolder
             }
             else if (!string.IsNullOrEmpty(beg_emne2) || !string.IsNullOrEmpty(beg_besked2))
             {
+                activityind.IsRunning = true;
                 var begive = new DatabaseFolder.DatabaseCubeBegivenhed(beg_emne2, beg_besked2);
                 await firedbCuBe.AddCubeBegivenhed(begive);
-
                 entryBeg.Text = "";
                 editorBeg.Text = "";
+                activityind.IsRunning = false;
                 await DisplayAlert("Begivenhed", "Begivenhed oprettet", "ok");
             }
         }
@@ -64,12 +65,14 @@ namespace Crossplatform_ssp.AdminFolder
             }
             else if (!string.IsNullOrEmpty(ops_emne) || !string.IsNullOrEmpty(ops_besked))
             {
+                activityind.IsRunning = true;
                 var opslag = new DatabaseCubeOpslag(ops_emne, ops_besked);
 
                 await firedbCuOP.AddCubeOpslag(opslag);
 
                 entryOps.Text = "";
                 editorOps.Text = "";
+                activityind.IsRunning = false;
                 await DisplayAlert("Opslag", "Opslag oprettet", "ok");
 
             }

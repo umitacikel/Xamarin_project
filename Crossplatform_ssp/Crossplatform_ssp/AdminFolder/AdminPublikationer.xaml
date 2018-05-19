@@ -4,6 +4,7 @@
              x:Class="Crossplatform_ssp.AdminFolder.AdminPublikationer"
              Title="Publikationer">
     <StackLayout>
+        <ActivityIndicator x:Name="activityindi"/>
         <Entry x:Name="pdfnavn"  Placeholder="Navn"/>
         <Entry x:Name="pdflink"  Placeholder="Link"/>
         <Image x:Name="ForsideBillede"/>

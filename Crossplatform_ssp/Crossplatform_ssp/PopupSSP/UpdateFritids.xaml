@@ -5,7 +5,8 @@
     <ContentPage.Content>
         <ScrollView>
         <StackLayout>
-             <Entry  x:Name="_emne"/>
+                <ActivityIndicator x:Name="activityind"/>
+                <Entry  x:Name="_emne"/>
              <Editor x:Name="_besked"/>
              <Button Text="Update" Clicked="updateClickedAsync"/>
         </StackLayout>

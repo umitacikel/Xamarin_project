@@ -31,12 +31,13 @@ namespace Crossplatform_ssp.PopupPages
 
         async void updateClickedAsync(object sender, EventArgs e)
         {
+            activityind.IsRunning = true;
             ops.T_OpslagEmne = _emne.Text;
             ops.T_OpslagBesked = _besked.Text;
 
             var db = new FirebaseFolder.FirebaseTetrizOpslagDB();
             var result = await db.getUpdateAsync(ops.key, ops);
-
+            activityind.IsRunning = false;
 
             if (result) await Navigation.PopAsync();
             else await DisplayAlert("Fejl", "Der opstod en fejl, prøv igen", "ok");

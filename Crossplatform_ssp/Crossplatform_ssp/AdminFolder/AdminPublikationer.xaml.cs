@@ -60,18 +60,21 @@ namespace Crossplatform_ssp.AdminFolder
         {
             try
             {
+                activityindi.IsRunning = true;
                 var fire = new FirebaseFolder.FirebasePublikationerDB();
 
                 var link = new DatabaseFolder.DatabasePublikationer(pdfnavn.Text, pdflink.Text);
 
                 await fire.SavePdf(imgstream, link);
 
-                await DisplayAlert("Success", "pdf er blevet uploadet", "Ok");
                 pdfnavn.Text = "";
                 pdflink.Text = "";
                 imgstream = null;
+                activityindi.IsRunning = false;
+                await DisplayAlert("Success", "pdf er blevet uploadet", "Ok");
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex);
             }

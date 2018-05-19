@@ -30,12 +30,13 @@ namespace Crossplatform_ssp.PopupPages
 
         async void updateClickedAsync(object sender, EventArgs e)
         {
+            activityind.IsRunning = true;
             beg.C_BegivenhedEmne = _emne.Text;
             beg.C_BegivenhedBesked = _besked.Text;
 
             var db = new FirebaseFolder.FirebaseCubeBegivenhederDB();
            var result = await db.getUpdateAsync(beg.key, beg);
-
+            activityind.IsRunning = false;
 
             if (result) await Navigation.PopAsync();
             else await DisplayAlert("Fejl", "Der opstod en fejl, prøv igen", "ok");

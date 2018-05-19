@@ -10,7 +10,8 @@
         <Button Text="Opret Cube Opslag" Clicked="stackOpslTrue" VerticalOptions="Center" HorizontalOptions="Fill" />
         <Button Text="Opdater Cube Begivenheder" Clicked="cubeBeg" VerticalOptions="Center" HorizontalOptions="Fill"/>
         <Button Text="Opdater Cube Opslag" Clicked="cubeOpslag" VerticalOptions="Center" HorizontalOptions="Fill"/>
-        <StackLayout IsVisible="False" x:Name="stackBeg">
+            <ActivityIndicator x:Name="activityind"/>
+            <StackLayout IsVisible="False" x:Name="stackBeg">
             <Entry x:Name="entryBeg" HorizontalOptions="Fill" VerticalOptions="Start" Margin="10" Placeholder="Begivenhed Emne"/>
             <Editor x:Name="editorBeg" HorizontalOptions="Fill" HeightRequest="200" Margin="10"/>
             <Button Text="Opret Cube Begivenhed" Clicked="begivenhedOpretCube"/>

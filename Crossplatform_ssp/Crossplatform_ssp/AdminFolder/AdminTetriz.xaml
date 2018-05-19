@@ -9,6 +9,7 @@
         <Button Text="Opret Tetriz Opslag" Clicked="stackOpslTrue" VerticalOptions="Center" HorizontalOptions="Fill" />
         <Button Text="Opdater Tetriz Begivenheder" Clicked="tetBeg" VerticalOptions="Center" HorizontalOptions="Fill"/>
         <Button Text="Opdater Tetriz Opslag" Clicked="tetOpslag" VerticalOptions="Center" HorizontalOptions="Fill"/>
+            <ActivityIndicator x:Name="activityind"/>
             <StackLayout IsVisible="False" x:Name="stackBeg">
                 <Entry x:Name="entryBeg" HorizontalOptions="Fill" VerticalOptions="Start" Margin="10" Placeholder="Begivenhed Emne"/>
                 <Editor x:Name="editorBeg" HorizontalOptions="Fill" HeightRequest="200" Margin="10"/>

@@ -47,11 +47,13 @@ namespace Crossplatform_ssp.AdminFolder
             }
             else if (!string.IsNullOrEmpty(beg_emne2) || !string.IsNullOrEmpty(beg_besked2))
             {
+                activityind.IsRunning = true;
                 var begivenhed = new DatabaseFolder.DatabaseTetrizBegivenhed(beg_emne2, beg_besked2);
                 await firebaseTeBe.AddCubeBegivenhed(begivenhed);
 
                 entryBeg.Text = "";
                 editorBeg.Text = "";
+                activityind.IsRunning = false;
                 await DisplayAlert("Begivenhed", "Begivenhed oprettet", "ok");
 
             }
@@ -67,11 +69,13 @@ namespace Crossplatform_ssp.AdminFolder
             }
             else if (!string.IsNullOrEmpty(ops_emne) || !string.IsNullOrEmpty(ops_besked))
             {
+                activityind.IsRunning = true;
                 var opslag = new DatabaseFolder.DatabaseTetrizOpslag(ops_emne, ops_besked);
                 await firebaseTeOp.AddTetrizOpslag(opslag);
 
                 entryOps.Text = "";
                 editorOps.Text = "";
+                activityind.IsRunning = false;
                 await DisplayAlert("Opslag", "Opslag oprettet", "ok");
             }
         }

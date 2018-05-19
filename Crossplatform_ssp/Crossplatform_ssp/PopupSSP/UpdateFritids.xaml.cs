@@ -29,12 +29,13 @@ namespace Crossplatform_ssp.PopupSSP
 
         async void updateClickedAsync(object sender, EventArgs e)
         {
+            activityind.IsRunning = true;
             fritpass.Fritidspas_Titel = _emne.Text;
             fritpass.Fritidspas_Tekst = _besked.Text;
 
             var db = new FirebaseFolder.FirebaseSSPFritidspasDB();
             var result = await db.getUpdateAsync(fritpass.key, fritpass);
-
+            activityind.IsRunning = false;
 
             if (result) await Navigation.PopAsync();
             else await DisplayAlert("Fejl", "Der opstod en fejl, prøv igen", "ok");

@@ -66,13 +66,18 @@ namespace Crossplatform_ssp.SSPFolder
             Children = { UngRåd_SendBtn, annullerBtn }
         };
 
+        static ActivityIndicator activityind = new ActivityIndicator()
+        {
+           
+        };
+
         StackLayout Opret_lay = new StackLayout()
         {
             VerticalOptions = LayoutOptions.CenterAndExpand,
             HorizontalOptions = LayoutOptions.FillAndExpand,
             Orientation = StackOrientation.Vertical,
             Children =
-          {UngRåd_Besked, Opret_buttons }
+          {activityind, UngRåd_Besked, Opret_buttons }
         };
 
         public Ungerådgivning ()
@@ -104,6 +109,7 @@ namespace Crossplatform_ssp.SSPFolder
                 {
                     try
                     {
+                        activityind.IsRunning = true;
                         SmtpClient client = new SmtpClient("smtp.outlook.com", 587);
                         client.EnableSsl = true;
                         client.DeliveryMethod = SmtpDeliveryMethod.Network;
@@ -115,7 +121,7 @@ namespace Crossplatform_ssp.SSPFolder
                         msg.Subject = "Åben Anonym Ungerådgivning";
                         msg.Body = UngRåd_Besked.Text;
                         client.Send(msg);
-
+                        activityind.IsRunning = false;
                         DisplayAlert("Information", "Din E-mail er blevet sendt, vi vil kontakte dig, hurtigst muligt", "ok");
                         annullerBtn.IsEnabled = true;
                         UngRåd_SendBtn.IsEnabled = false;

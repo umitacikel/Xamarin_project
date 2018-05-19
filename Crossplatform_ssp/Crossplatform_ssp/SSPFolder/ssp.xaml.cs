@@ -24,7 +24,6 @@ namespace Crossplatform_ssp
             this.Children.Add(ungeråd);
             this.Children.Add(fritidspas);
             this.Children.Add(personale);
-            this.Children.Add(face);
 
             this.BarBackgroundColor = Color.FromHex("#29B19D");
             this.BarTextColor = Color.White;
