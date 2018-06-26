@@ -37,6 +37,35 @@ namespace Crossplatform_ssp.FirebaseFolder
                 .PostAsync(opslag);
         }
 
+        public async Task<List<DatabaseFolder.person>> getDeltagerAsync(String kkey)
+        {
+            return (await FbClient
+                    .Child("TetrizBegivenhed/" + kkey + "/Tilmeldte")
+                    .OnceAsync<DatabaseFolder.person>())
+                    .Select((item) =>
+                    new DatabaseFolder.person
+                    {
+                        _name = item.Object._name,
+                        _lastName = item.Object._lastName,
+                        _Email = item.Object._Email
+                    }).ToList();
+        }
+
+        public async Task AddDeltager(String key, DatabaseFolder.person person)
+        {
+            try
+            {
+                await FbClient
+                        .Child("TetrizBegivenhed/" + key + "/Tilmeldte")
+                        .PostAsync(person);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
         public async Task<bool> getUpdateAsync(String key, DatabaseFolder.DatabaseTetrizBegivenhed begivenhed)
         {
             try

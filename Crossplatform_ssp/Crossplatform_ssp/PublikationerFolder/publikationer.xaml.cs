@@ -26,19 +26,16 @@ namespace Crossplatform_ssp
 		{
 			InitializeComponent ();
 
-           // listviewPubli.ItemSelected += pubiclick;
-        }
-
-        private void pubiclick(object sender, SelectedItemChangedEventArgs e)
-        {
-          
-            var mItem = sender as MenuItem;
-            var pubData = (DatabaseFolder.DatabasePublikationer)mItem.CommandParameter;
-
-            Device.OpenUri(new Uri(pubData.Link));
+            listviewPubli.ItemSelected += (object sender, SelectedItemChangedEventArgs e) => 
+            {
+                var eitem = (DatabaseFolder.DatabasePublikationer) e.SelectedItem;
+                var linki = eitem.Link;
+                Device.OpenUri(new Uri(linki));
+            };
 
         }
 
+       
         private async Task listview_Refreshing(object sender, EventArgs e)
         {
             listviewPubli.BindingContext = await fbpubli.getPubli();

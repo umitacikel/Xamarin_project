@@ -26,6 +26,19 @@ namespace Crossplatform_ssp.TetrizFolder
         public tetriz_begivenheder ()
 		{
 			InitializeComponent ();
+
+
+
+            
+               listviewTetrizBegivenhed.ItemSelected += (object sender, SelectedItemChangedEventArgs e) => {
+
+                var _key = (DatabaseTetrizBegivenhed)e.SelectedItem;
+                Navigation.PushPopupAsync(new tilmeldpopT(_key.key));
+             };
+             
+             
+
+
         }
 
         private async Task listviewTetrizBegivenhed_RefreshingAsync(object sender, EventArgs e)

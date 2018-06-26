@@ -1,5 +1,4 @@
-﻿using Com.Hitomi.Cmlibrary;
-using Rg.Plugins.Popup.Extensions;
+﻿using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
 using System;
 using System.Collections.Generic;
@@ -20,7 +19,7 @@ namespace Crossplatform_ssp
         public startside() {
             InitializeComponent();
 
-
+            
             startSSPBtn.Clicked += async (sender, e) => {
                 await App.NavigateMasterDetail(new ssp());
             };

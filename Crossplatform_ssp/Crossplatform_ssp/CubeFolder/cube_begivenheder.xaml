@@ -11,7 +11,7 @@
                     <ViewCell.View>
                         <StackLayout Spacing="10" Padding="20">
                             <Label Text="{Binding C_BegivenhedEmne}" Font="Bold, 20"/>
-                            <Label Text="{Binding C_BegivenhedBesked}" FontSize="16"/>
+                            <Label Text="{Binding C_BegivenhedBesked}" FontSize="Medium"/>
                         </StackLayout>
                     </ViewCell.View>
                   </ViewCell>

@@ -1,6 +1,7 @@
 ﻿using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace Crossplatform_ssp.DatabaseFolder
@@ -17,6 +18,8 @@ namespace Crossplatform_ssp.DatabaseFolder
             this.C_BegivenhedEmne = c_emne;
             this.C_BegivenhedBesked = c_besked;
         }
+
+       
 
     }
 }

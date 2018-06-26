@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="Crossplatform_ssp.tilmeldpopT">
+   
+    <StackLayout VerticalOptions="Center"
+                 HorizontalOptions="CenterAndExpand"
+                 Orientation="Vertical"
+                 BackgroundColor="WhiteSmoke">
+
+
+        <Button Text="Se deltagere" x:Name="_deltagere" Clicked="sedeltagere" />
+        <Entry Placeholder="Navn" x:Name="_navn" IsVisible="True" HorizontalOptions="FillAndExpand" />
+        <Entry Placeholder="Efternavn" x:Name="_efternavn" IsVisible="True" HorizontalOptions="FillAndExpand"/>
+        <Entry Placeholder="Email" x:Name="_email" IsVisible="True" HorizontalOptions="FillAndExpand"/>
+        <Button Text="Tjek info" x:Name="_tjek" IsVisible="True" IsEnabled="True" Clicked="tjekbtn"/>
+        <Button Text="Send" x:Name="_send" Clicked="godkendelseskode" IsVisible="True" IsEnabled="False"/>
+        <Button Text="Annuller" x:Name="_annuller" IsVisible="True" />
+        <ActivityIndicator x:Name="_activi"/>
+        <Entry Placeholder="Kode" x:Name="_kode" IsVisible="False"/>
+        <Button Text="Godkend" x:Name="_godkend" IsVisible="False"/>
+
+    </StackLayout>
+
+
+</pages:PopupPage>

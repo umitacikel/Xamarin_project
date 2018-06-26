@@ -4120,9 +4120,6 @@ namespace Crossplatform_ssp.Droid
 			// aapt resource value: 0x7f090025
 			public const int abc_toolbar_collapse_description = 2131296293;
 			
-			// aapt resource value: 0x7f09003c
-			public const int app_name = 2131296316;
-			
 			// aapt resource value: 0x7f090033
 			public const int appbar_scrolling_view_behavior = 2131296307;
 			

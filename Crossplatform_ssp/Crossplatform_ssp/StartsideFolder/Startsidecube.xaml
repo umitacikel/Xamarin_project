@@ -3,6 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Crossplatform_ssp.StartsideFolder.Startsidecube"
              BackgroundImage="startsidec.png">
-
+ 
 
 </ContentPage>
