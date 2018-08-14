@@ -140,7 +140,6 @@
     <BundleResource Include="Resources\Icon-60%403x.png" />
     <BundleResource Include="Resources\Icon-Small-40%403x.png" />
     <BundleResource Include="Resources\Icon-Small%403x.png" />
-    <BundleResource Include="Resources\SplashScreen Ex2.png" />
     <BundleResource Include="Resources\icon_iphone_ios7_retina.png" />
     <BundleResource Include="Resources\hamburger.png" />
     <BundleResource Include="Resources\ic_group.png" />
@@ -148,6 +147,8 @@
     <BundleResource Include="Resources\ic_call1.png" />
     <BundleResource Include="Resources\ic_help.png" />
     <BundleResource Include="Resources\ic_chat.png" />
+    <BundleResource Include="Resources\fff.png" />
+    <BundleResource Include="Resources\fff1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">

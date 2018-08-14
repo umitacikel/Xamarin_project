@@ -44,6 +44,8 @@ namespace Crossplatform_ssp
 		}
 
 
+
+
         public static void StartCheckIfInternet(Label label, Page page)
         {
             labelScreen = label;
