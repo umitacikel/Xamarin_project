@@ -111,16 +111,16 @@ namespace Crossplatform_ssp.AdminFolder
                 }
                 else
                 {
-                    var file = await CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions()
+                    var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
                     {
-
+                        CustomPhotoSize = 50
                     });
 
                     if (file != null)
                     {
-
-                        ssp_billede.Source = ImageSource.FromStream(() => ssp_imgstr);
                         ssp_imgstr = file.GetStream();
+                        ssp_billede.Source = ImageSource.FromStream(() => ssp_imgstr);
+                       
 
                     }
                 }

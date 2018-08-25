@@ -47,9 +47,9 @@ namespace Crossplatform_ssp.FirebaseFolder
                     .Select((item) =>
                     new DatabaseFolder.person
                     {
-                       _name = item.Object._name,
-                       _lastName = item.Object._lastName,
-                       _Email = item.Object._Email
+                       name = item.Object.name,
+                       lastName = item.Object.lastName,
+                       Email = item.Object.Email
                     }).ToList();
         }
 

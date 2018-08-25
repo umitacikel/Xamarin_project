@@ -19,7 +19,7 @@ namespace Crossplatform_ssp
   
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class tilmeldpop : PopupPage
-	{
+    {
         public string getkeyy;
         public tilmeldpop(String getkey)
 		{
@@ -28,11 +28,18 @@ namespace Crossplatform_ssp
 
         }
 
+        public void tilbage(object sender, EventArgs e)
+        {
+            Navigation.PopPopupAsync();
+        }
+
+
         public void tjekbtn(object sender, EventArgs e)
         {
             Console.WriteLine(getkeyy);
+           
             if (_navn.Text.Equals("") || _efternavn.Text.Equals("") || _email.Text.Equals("") ) {
-                Console.WriteLine("oC");
+                DisplayAlert("Fejl", "Udfyld venligst alle felter", "Ok");
             }
             else
             {

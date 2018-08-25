@@ -20,7 +20,9 @@ namespace Crossplatform_ssp
             var fritidspas = new SSPFolder.Fritidspas();
             var personale = new SSPFolder.SSPPersonale();
             var face = new SSPFolder.SSPFacebook();
+            var ops = new SSPFolder.SSPopslag();
 
+            this.Children.Add(ops);
             this.Children.Add(ungeråd);
             this.Children.Add(fritidspas);
             this.Children.Add(personale);

@@ -1,4 +1,5 @@
-﻿using Rg.Plugins.Popup.Pages;
+﻿using Rg.Plugins.Popup.Extensions;
+using Rg.Plugins.Popup.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,22 +16,25 @@ namespace Crossplatform_ssp
 	{
         public String keyy;
         FirebaseFolder.FirebaseCubeBegivenhederDB firedbcube = new FirebaseFolder.FirebaseCubeBegivenhederDB();
+        
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            
+            var list =  await firedbcube.getDeltagerAsync(keyy);
+            listviewspinner.BindingContext = list;
+        }
 
         public spinnerpop(String key)
         {
             InitializeComponent();
-            keyy = key;
-            Console.WriteLine(keyy);
         }
 
-        protected override void OnAppearing()
+        public void tilbage(object sender, EventArgs e)
         {
-            base.OnAppearing();
-
-            var list = firedbcube.getDeltagerAsync(keyy);
-            listviewspinner.BindingContext = list;
+            Navigation.PopPopupAsync();
         }
-
 
     }
 }

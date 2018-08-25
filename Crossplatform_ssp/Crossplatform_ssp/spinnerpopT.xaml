@@ -4,20 +4,22 @@
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  x:Class="Crossplatform_ssp.spinnerpopT">
     <StackLayout>
-        <Button Text="XXX"/>
-        <ListView ItemsSource="{Binding .}"  x:Name="listviewspinner" HasUnevenRows="true" >
-            <ListView.ItemTemplate>
-                <DataTemplate >
-                    <ViewCell >
-                        <ViewCell.View>
-                            <StackLayout>
-                                <Label Text="{Binding _name}" Font="Bold, 20"/>
-                                <Label Text="{Binding _lastName}" FontSize="Medium"/>
-                            </StackLayout>
-                        </ViewCell.View>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <Button Text="Tilbage" x:Name="tilbageknap" Clicked="tilbage"/>
+        <StackLayout>
+            <ListView ItemsSource="{Binding .}"  x:Name="listviewspinner" HasUnevenRows="true" >
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <ViewCell >
+                            <ViewCell.View>
+                                <StackLayout>
+                                    <Label Text="{Binding name}" Font="Bold, 20"/>
+                                    <Label Text="{Binding lastName}" FontSize="Medium"/>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </StackLayout>
 </pages:PopupPage>

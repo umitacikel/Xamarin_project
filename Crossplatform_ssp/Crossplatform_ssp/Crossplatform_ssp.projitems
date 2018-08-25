@@ -53,6 +53,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseFolder\DatabasePublikationer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseFolder\DatabaseSSPFritidspas.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseFolder\DatabaseSSPFritidspassController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DatabaseFolder\DatabaseSSPopslag.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseFolder\DatabaseSSPUngRåd.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseFolder\DatabaseSSPUngRådController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DatabaseFolder\DatabaseTCPersonale.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseCubeOpslagDB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebasePublikationerDB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseSSPFritidspasDB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseSSPopslag.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseSSPPersonale.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseSSPUngerådDB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirebaseFolder\FirebaseTetrizBegivenhederDB.cs" />
@@ -141,6 +143,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SSPFolder\SSPFacebook.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SSPFolder\SSPopslag.xaml.cs">
+      <DependentUpon>SSPopslag.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SSPFolder\SSPPersonale.xaml.cs">
@@ -424,6 +430,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)tilmeldpopT.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SSPFolder\SSPopslag.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

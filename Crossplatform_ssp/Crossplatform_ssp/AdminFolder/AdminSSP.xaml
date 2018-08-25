@@ -7,5 +7,18 @@
     <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
         <Button  Text="Opdater SSP UngRåd"  Clicked="updateUngeråd" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
         <Button Text="Opdater SSP Fritidspas" Clicked="updateFripas" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-    </StackLayout>  
+        <ActivityIndicator x:Name="activityind"/>
+        <StackLayout>
+            <Entry x:Name="ssp_emne" Placeholder="Emne"/>
+            <Entry x:Name="ssp_beskrivelse" Placeholder="Beskrivelse"/>
+            <Image x:Name="ssp_billede" />
+            <Button x:Name="ssp_uploadbillede" Text="Upload Billede" Clicked="ssp_uploadBilledeFunc"/>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="ssp_opret" Text="Opret" Clicked="ssp_opretOps"/>
+                <Button x:Name="tc_annuller" Text="Annuller"/>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+    
+    
 </ContentPage>

@@ -6,16 +6,16 @@ namespace Crossplatform_ssp.DatabaseFolder
 {
     public class person
     {
-        public String _name { get; set; }
-        public String _lastName { get; set; }
-        public String _Email { get; set; }
+        public String name { get; set; }
+        public String lastName { get; set; }
+        public String Email { get; set; }
 
         public person() { }
 
         public person(String name, String lastname, String email) {
-            this._name = name;
-            this._lastName = lastname;
-            this._Email = email;
+            this.name = name;
+            this.lastName = lastname;
+            this.Email = email;
         }
     }
 }

@@ -21,6 +21,13 @@ namespace Crossplatform_ssp
 			InitializeComponent ();
             keyy = key;
             Console.WriteLine(keyy);
+           
+        }
+
+        public void tilbage(object sender, EventArgs e)
+        {
+            Navigation.PopPopupAsync();
+            
         }
 
         protected override void OnAppearing()

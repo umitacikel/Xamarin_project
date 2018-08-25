@@ -1,4 +1,5 @@
 ﻿using Crossplatform_ssp.DatabaseFolder;
+using Rg.Plugins.Popup.Extensions;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,8 @@ namespace Crossplatform_ssp.TetrizFolder
 
                 var _key = (DatabaseTetrizBegivenhed)e.SelectedItem;
                 Navigation.PushPopupAsync(new tilmeldpopT(_key.key));
+                
+                
              };
              
              
