@@ -6,15 +6,16 @@
 
     <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
         <Button Text="Tilbage" x:Name="tilbageknap" Clicked="tilbage"/>
-        <StackLayout BackgroundColor ="White">
-            <ListView ItemsSource="{Binding .}"  x:Name="listviewspinner" HasUnevenRows="true" >
+        <StackLayout BackgroundColor="White">
+            <ListView ItemsSource="{Binding .}"  x:Name="listviewspinner" HasUnevenRows="true"
+                      IsPullToRefreshEnabled="True" Refreshing="RefreshingAsync">
                 <ListView.ItemTemplate>
                     <DataTemplate >
                         <ViewCell >
                             <ViewCell.View>
-                                <StackLayout>
-                                    <Label Text="{Binding name}" Font="Bold, 20"/>
-                                    <Label Text="{Binding lastName}" FontSize="Medium"/>
+                                <StackLayout Spacing="10" Padding="20">
+                                    <Label Text="{Binding Name}"  Font="Bold, 20" />
+                                    <Label Text="{Binding LastName}" FontSize="Medium"/>
                                 </StackLayout>
                             </ViewCell.View>
                         </ViewCell>

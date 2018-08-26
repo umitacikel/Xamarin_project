@@ -16,7 +16,7 @@
         <Entry Placeholder="Email" x:Name="_email" IsVisible="True" HorizontalOptions="FillAndExpand"/>
         <Button Text="Tjek info" x:Name="_tjek" IsVisible="True" IsEnabled="True" Clicked="tjekbtn"/>
         <Button Text="Send" x:Name="_send" Clicked="godkendelseskode" IsVisible="True" IsEnabled="False"/>
-        <Button Text="Annuller" x:Name="_annuller" IsVisible="True" />
+        <Button Text="Annuller" x:Name="_annuller" IsVisible="True" Clicked="tilbage"/>
         <ActivityIndicator x:Name="_activi"/>
         <Entry Placeholder="Kode" x:Name="_kode" IsVisible="False"/>
         <Button Text="Godkend" x:Name="_godkend" IsVisible="False"/>

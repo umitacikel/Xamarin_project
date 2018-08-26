@@ -38,7 +38,8 @@ namespace Crossplatform_ssp
         {
             Console.WriteLine(getkeyy);
            
-            if (_navn.Text.Equals("") || _efternavn.Text.Equals("") || _email.Text.Equals("") ) {
+            if (_navn.Text == null || _efternavn.Text == null || _email.Text == null )
+            {
                 DisplayAlert("Fejl", "Udfyld venligst alle felter", "Ok");
             }
             else

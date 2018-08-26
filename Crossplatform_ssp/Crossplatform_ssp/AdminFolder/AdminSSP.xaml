@@ -9,6 +9,7 @@
         <Button Text="Opdater SSP Fritidspas" Clicked="updateFripas" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
         <ActivityIndicator x:Name="activityind"/>
         <StackLayout>
+            <Button Text="Slet SSP Opslag" Clicked="sletOpslag" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
             <Entry x:Name="ssp_emne" Placeholder="Emne"/>
             <Entry x:Name="ssp_beskrivelse" Placeholder="Beskrivelse"/>
             <Image x:Name="ssp_billede" />

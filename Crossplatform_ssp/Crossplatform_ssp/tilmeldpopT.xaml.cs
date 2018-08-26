@@ -24,10 +24,16 @@ namespace Crossplatform_ssp
             getkeyy = getkey;
         }
 
+
+        public void tilbage(object sender, EventArgs e)
+        {
+            Navigation.PopPopupAsync();
+        }
+
         public void tjekbtn(object sender, EventArgs e)
         {
             Console.WriteLine(getkeyy);
-            if (_navn.Text.Equals("") || _efternavn.Text.Equals("") || _email.Text.Equals(""))
+            if (_navn.Text == null || _efternavn.Text == null || _email.Text == null)
             {
                 Console.WriteLine("oC");
             }

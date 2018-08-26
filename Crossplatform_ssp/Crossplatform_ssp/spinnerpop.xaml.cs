@@ -24,11 +24,14 @@ namespace Crossplatform_ssp
             
             var list =  await firedbcube.getDeltagerAsync(keyy);
             listviewspinner.BindingContext = list;
+            Console.WriteLine("asgdhasdvjsvbfbjhghjdjfbjsakdsjad");
+            Console.WriteLine(keyy);
         }
 
         public spinnerpop(String key)
         {
             InitializeComponent();
+            keyy = key;
         }
 
         public void tilbage(object sender, EventArgs e)
@@ -36,5 +39,10 @@ namespace Crossplatform_ssp
             Navigation.PopPopupAsync();
         }
 
+        private async Task RefreshingAsync(object sender, EventArgs e)
+        {
+            listviewspinner.BindingContext = await firedbcube.getDeltagerAsync(keyy);
+            listviewspinner.IsRefreshing = false;
+        }
     }
 }

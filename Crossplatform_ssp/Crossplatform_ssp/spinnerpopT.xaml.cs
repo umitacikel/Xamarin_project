@@ -1,4 +1,5 @@
 ﻿using Rg.Plugins.Popup.Pages;
+using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,15 @@ namespace Crossplatform_ssp
         public String keyy;
         FirebaseFolder.FirebaseTetrizBegivenhederDB firedbcube = new FirebaseFolder.FirebaseTetrizBegivenhederDB();
 
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            var list = firedbcube.getDeltagerAsync(keyy);
+            listviewspinner.BindingContext = list;
+        }
+
         public spinnerpopT (String key)
 		{
 			InitializeComponent ();
@@ -30,12 +40,12 @@ namespace Crossplatform_ssp
             
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
 
-            var list = firedbcube.getDeltagerAsync(keyy);
-            listviewspinner.BindingContext = list;
+        private async Task RefreshingAsync(object sender, EventArgs e)
+        {
+            listviewspinner.BindingContext = await firedbcube.getDeltagerAsync(keyy);
+            listviewspinner.IsRefreshing = false;
         }
+
     }
 }

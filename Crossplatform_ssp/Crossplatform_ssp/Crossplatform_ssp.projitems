@@ -116,6 +116,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)PopupSSP\PopupFritids.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)PopupSSP\PopupsspOpslag.xaml.cs">
+      <DependentUpon>PopupsspOpslag.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)PopupSSP\PopupUngråd.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -436,6 +440,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)SSPFolder\SSPopslag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PopupSSP\PopupsspOpslag.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

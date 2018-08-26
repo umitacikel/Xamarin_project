@@ -31,6 +31,11 @@ namespace Crossplatform_ssp.AdminFolder
             Navigation.PushAsync(new PopupSSP.PopupFritids());
         }
 
+        void sletOpslag()
+        {
+            Navigation.PushAsync(new PopupSSP.PopupsspOpslag());
+        }
+
         void updateUngeråd()
         {
             Navigation.PushAsync(new PopupSSP.PopupUngråd());
